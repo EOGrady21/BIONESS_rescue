@@ -1,0 +1,57 @@
+---
+title: "Historical BioChem Archival"
+output: html_notebook
+author: "Emily O'Grady"
+---
+This R markdown outlines the steps taken to archive historical BIONESS data in BioChem.
+This project was undertaken under the direction of Catherine Johnson at Fisheries and Oceans
+Canada, Maritimes Region Ocean Ecosystems Science Division.
+
+# Data cleaning and formatting
+
+# Metadata cleaning and supplementing
+
+# Load file formats
+
+# Extracting volume data from electronic files
+
+In order to properly represent the plankton data in BioChem, the sampled volume
+information was essential. This metadata was found in the BIONESS electronic files
+which were located for all except 1 historical mission slated to be archived.
+
+The elctronic file format was confirmed with Nelson Rice who wrote the original
+program to produce the files. 
+
+```{r}
+library(BIONESSQC)
+datapath <- 'R:/Science/BIODataSvc/SRC/ZPlankton_DataRescue/OGrady_2024/raw_data'
+# Gather all files for HUD2014030 (test mission to be loaded first)
+efiles <- readxl::read_xlsx('electronic_file_log.xlsx')
+efile_paths <- list()
+for (i in 1:length(efiles)) {
+  efile_paths[[i]] <- list.files(file.path(datapath, efiles$mission[i]),
+             pattern = efiles$electronic_file_name[i],
+             recursive = TRUE,
+             full.names = TRUE)
+}
+
+bionessdata <- list()
+for (i in 1:length(efile_paths)) {
+  bionessdata[[i]] <- read_bioness(efile_paths[[i]])
+}
+
+```
+
+
+Once the electronic files were accessible in R, I was able to extract the volume 
+data to provide along with the plankton taxonomic data and other event metadata.
+
+```{r}
+# synthesize volume data in a table for loading
+for (i in 1:length(bionessdata)) {
+  # TODO needs to include sample ID from data
+}
+
+# output should be table with mission, event, tow, sample id, volume
+```
+
