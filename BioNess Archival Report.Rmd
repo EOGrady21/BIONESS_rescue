@@ -7,11 +7,93 @@ This R markdown outlines the steps taken to archive historical BIONESS data in B
 This project was undertaken under the direction of Catherine Johnson at Fisheries and Oceans
 Canada, Maritimes Region Ocean Ecosystems Science Division.
 
+This report summarizes the completion of the project involving the consolidation and quality control of plankton data from various missions. The data was consolidated from various locations and shared folders at Bedford Institute of Oceanography.
+
 # Data cleaning and formatting
+
+The raw data was consolidated into a single folder for each cruise, sourced from Shelley's investigative folders and SRC cruise folders. We checked the plankton data loaded to BioChem for each mission, noting that none included BIONESS data. Metadata was checked for each mission, and BIONESS log sheets were moved into each cruise folder since most missions required at least some metadata from the logs to be input.
+
+A discussion with Rebecca Milne prompted the organization of data accounting by individual station, as data was often analyzed by location rather than mission. For example, Gully tows from 2003-2010 were analyzed together, likely due to funding organization. We reviewed log sheets and set up an accounting spreadsheet for 2009-2016 data by mission and station. 
+
+* How many missions and stations were archived as part of this project* 
+
+* Table of data included *
+
+
 
 # Metadata cleaning and supplementing
 
+The process of metadata cleaning and supplementing was a crucial step in ensuring the integrity and usability of the plankton data for future analyses and data collection efforts.
+
+### Initial Assessment and Consolidation
+
+The first step involved consolidating raw data from various sources into a single folder for each cruise. This included data from Shelley's investigative folders and SRC cruise folders. We then checked the plankton data loaded to BioChem for each mission, ensuring that no BIONESS data was included initially.
+
+### Identifying Metadata Gaps
+
+During the initial assessment, we identified several gaps and inconsistencies in the metadata. Common issues included missing sample IDs, sounding data, and discrepancies in date formats. Sounding data, typically recorded on BIONESS log sheets, was often missing and needed to be entered manually. Sample IDs were inconsistently recorded, sometimes using stickers on the BIONESS logs, which required us to generate new unique IDs for certain missions.
+
+### Standardizing Metadata
+
+To address these issues, we standardized the metadata across all files. This involved:
+
+Ensuring consistent date formats (DD-MON-YY).
+Standardizing column names and metadata formatting, including dates and gear representation.
+Adding missing metadata manually from handwritten log sheets, such as event numbers, dates, and sample IDs.
+Quality Control and Validation
+Quality control was a critical part of the metadata cleaning process. We conducted thorough checks to ensure:
+
+Dates matched between log sheets and data.
+Start and end depths were consistent between log sheets and data.
+Tow-sample matches were accurate.
+Event numbers were consistent across log sheets and data.
+Results of these checks were recorded in a tracking spreadsheet, and any inconsistencies were documented in a metadata discrepancies file.
+
+### Supplementing Metadata
+
+In cases where metadata was missing or incomplete, we supplemented it using various methods:
+
+Filling in sample IDs using a compound ID formula where necessary.
+Confirming metadata with team members, such as checking what was written on sample bottles when stickers were not used.
+Using elog files to recreate missing metadata, ensuring it matched expectations and could be loaded through the usual template procedures.
+Final Steps
+The final combined mission files were stored in a designated folder and recorded on a tracking sheet. A meeting with ODIS confirmed the loading procedure, ensuring that the correct metadata was included and that BioChem rules were followed regarding formatting.
+
+By meticulously cleaning and supplementing the metadata, we ensured that the plankton data is reliable and ready for future analyses. This process also established a robust framework for handling metadata in future data collection efforts, enhancing the overall quality and usability of the data.
+
 # Load file formats
+The standardized format of the files is essential for ensuring consistency and ease of use in future analyses. Each file follows a specific structure with clearly defined columns. Below is an overview of the file format, including a table with space for column definitions.
+
+Standardized File Structure
+Each file contains the following columns:
+
+* format into table*
+Column Name	Definition
+MISSION	Provide definition here
+DATE	Provide definition here
+STN	Provide definition here
+TOW#	Provide definition here
+GEAR	Provide definition here
+EVENT	Provide definition here
+SAMPLEID	Provide definition here
+START_DEPTH	Provide definition here
+END_DEPTH	Provide definition here
+ANALYSIS	Provide definition here
+SPLIT	Provide definition here
+ALIQUOT	Provide definition here
+SPLIT_FRACTION	Provide definition here
+TAXA	Provide definition here
+NCODE	Provide definition here
+STAGE	Provide definition here
+SEX	Provide definition here
+DATA_VALUE	Provide definition here
+PROC_CODE	Provide definition here
+WHAT_WAS_IT	Provide definition here
+COMMENT	Provide definition here
+
+### Date Format
+
+The date format used in all files is DD-MON-YY to ensure consistency across datasets.
 
 # Extracting volume data from electronic files
 
@@ -22,13 +104,23 @@ which were located for all except 1 historical mission slated to be archived.
 The elctronic file format was confirmed with Nelson Rice who wrote the original
 program to produce the files. 
 
+The ectronic file log was generated manually with information from the 
+logsheets, electronic files and taxonomic data. It includes columns
+  - mission
+  - tow
+  - event
+  - electronic_file_name
+  - sample_id
+  - net_number
+  - volume
+
 ```{r}
 library(BIONESSQC)
 datapath <- 'R:/Science/BIODataSvc/SRC/ZPlankton_DataRescue/OGrady_2024/raw_data'
 # Gather all files for HUD2014030 (test mission to be loaded first)
-efiles <- readxl::read_xlsx('electronic_file_log.xlsx')
+efiles <- readxl::read_xlsx(file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx'))
 efile_paths <- list()
-for (i in 1:length(efiles)) {
+for (i in 1:length(efiles$electronic_file_name)) {
   efile_paths[[i]] <- list.files(file.path(datapath, efiles$mission[i]),
              pattern = efiles$electronic_file_name[i],
              recursive = TRUE,
@@ -47,11 +139,26 @@ Once the electronic files were accessible in R, I was able to extract the volume
 data to provide along with the plankton taxonomic data and other event metadata.
 
 ```{r}
-# synthesize volume data in a table for loading
-for (i in 1:length(bionessdata)) {
-  # TODO needs to include sample ID from data
-}
+# Read the volume table
+vol_table <- readxl::read_xlsx(file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx'))
 
-# output should be table with mission, event, tow, sample id, volume
+# Synthesize volume data in a table for loading
+vol_full <- map_dfr(bionessdata, function(efiledat) {
+  event_num <- as.numeric(efiledat$metadata$`Event #`)
+  net_nums <- as.numeric(str_extract(efiledat$data$net_number, "\\d+"))
+  volume <- as.numeric(efiledat$data$volume)
+  
+  vol_dat <- data.frame(event_num, net_nums, volume)
+  
+  vol_table %>%
+    select(-volume) %>%
+    inner_join(vol_dat, by = c('event' = 'event_num', 'net_number' = 'net_nums'))
+})
+
+xlsx::write.xlsx(x = vol_full,
+                 file = file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx')
+                 )
 ```
 
+Volume data is combined with other metadata including event, and sample ID to be
+matched up to taxonomic data.

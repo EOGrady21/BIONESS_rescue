@@ -1758,14 +1758,116 @@ display: none;
 BIONESS data in BioChem. This project was undertaken under the direction
 of Catherine Johnson at Fisheries and Oceans Canada, Maritimes Region
 Ocean Ecosystems Science Division.</p>
+<p>This report summarizes the completion of the project involving the
+consolidation and quality control of plankton data from various
+missions. The data was consolidated from various locations and shared
+folders at Bedford Institute of Oceanography.</p>
 <div id="data-cleaning-and-formatting" class="section level1">
 <h1>Data cleaning and formatting</h1>
+<p>The raw data was consolidated into a single folder for each cruise,
+sourced from Shelley’s investigative folders and SRC cruise folders. We
+checked the plankton data loaded to BioChem for each mission, noting
+that none included BIONESS data. Metadata was checked for each mission,
+and BIONESS log sheets were moved into each cruise folder since most
+missions required at least some metadata from the logs to be input.</p>
+<p>A discussion with Rebecca Milne prompted the organization of data
+accounting by individual station, as data was often analyzed by location
+rather than mission. For example, Gully tows from 2003-2010 were
+analyzed together, likely due to funding organization. We reviewed log
+sheets and set up an accounting spreadsheet for 2009-2016 data by
+mission and station.</p>
+<ul>
+<li><p>How many missions and stations were archived as part of this
+project*</p></li>
+<li><p>Table of data included *</p></li>
+</ul>
 </div>
 <div id="metadata-cleaning-and-supplementing" class="section level1">
 <h1>Metadata cleaning and supplementing</h1>
+<p>The process of metadata cleaning and supplementing was a crucial step
+in ensuring the integrity and usability of the plankton data for future
+analyses and data collection efforts.</p>
+<div id="initial-assessment-and-consolidation" class="section level3">
+<h3>Initial Assessment and Consolidation</h3>
+<p>The first step involved consolidating raw data from various sources
+into a single folder for each cruise. This included data from Shelley’s
+investigative folders and SRC cruise folders. We then checked the
+plankton data loaded to BioChem for each mission, ensuring that no
+BIONESS data was included initially.</p>
+</div>
+<div id="identifying-metadata-gaps" class="section level3">
+<h3>Identifying Metadata Gaps</h3>
+<p>During the initial assessment, we identified several gaps and
+inconsistencies in the metadata. Common issues included missing sample
+IDs, sounding data, and discrepancies in date formats. Sounding data,
+typically recorded on BIONESS log sheets, was often missing and needed
+to be entered manually. Sample IDs were inconsistently recorded,
+sometimes using stickers on the BIONESS logs, which required us to
+generate new unique IDs for certain missions.</p>
+</div>
+<div id="standardizing-metadata" class="section level3">
+<h3>Standardizing Metadata</h3>
+<p>To address these issues, we standardized the metadata across all
+files. This involved:</p>
+<p>Ensuring consistent date formats (DD-MON-YY). Standardizing column
+names and metadata formatting, including dates and gear representation.
+Adding missing metadata manually from handwritten log sheets, such as
+event numbers, dates, and sample IDs. Quality Control and Validation
+Quality control was a critical part of the metadata cleaning process. We
+conducted thorough checks to ensure:</p>
+<p>Dates matched between log sheets and data. Start and end depths were
+consistent between log sheets and data. Tow-sample matches were
+accurate. Event numbers were consistent across log sheets and data.
+Results of these checks were recorded in a tracking spreadsheet, and any
+inconsistencies were documented in a metadata discrepancies file.</p>
+</div>
+<div id="supplementing-metadata" class="section level3">
+<h3>Supplementing Metadata</h3>
+<p>In cases where metadata was missing or incomplete, we supplemented it
+using various methods:</p>
+<p>Filling in sample IDs using a compound ID formula where necessary.
+Confirming metadata with team members, such as checking what was written
+on sample bottles when stickers were not used. Using elog files to
+recreate missing metadata, ensuring it matched expectations and could be
+loaded through the usual template procedures. Final Steps The final
+combined mission files were stored in a designated folder and recorded
+on a tracking sheet. A meeting with ODIS confirmed the loading
+procedure, ensuring that the correct metadata was included and that
+BioChem rules were followed regarding formatting.</p>
+<p>By meticulously cleaning and supplementing the metadata, we ensured
+that the plankton data is reliable and ready for future analyses. This
+process also established a robust framework for handling metadata in
+future data collection efforts, enhancing the overall quality and
+usability of the data.</p>
+</div>
 </div>
 <div id="load-file-formats" class="section level1">
 <h1>Load file formats</h1>
+<p>The standardized format of the files is essential for ensuring
+consistency and ease of use in future analyses. Each file follows a
+specific structure with clearly defined columns. Below is an overview of
+the file format, including a table with space for column
+definitions.</p>
+<p>Standardized File Structure Each file contains the following
+columns:</p>
+<ul>
+<li>format into table* Column Name Definition MISSION Provide definition
+here DATE Provide definition here STN Provide definition here TOW#
+Provide definition here GEAR Provide definition here EVENT Provide
+definition here SAMPLEID Provide definition here START_DEPTH Provide
+definition here END_DEPTH Provide definition here ANALYSIS Provide
+definition here SPLIT Provide definition here ALIQUOT Provide definition
+here SPLIT_FRACTION Provide definition here TAXA Provide definition here
+NCODE Provide definition here STAGE Provide definition here SEX Provide
+definition here DATA_VALUE Provide definition here PROC_CODE Provide
+definition here WHAT_WAS_IT Provide definition here COMMENT Provide
+definition here</li>
+</ul>
+<div id="date-format" class="section level3">
+<h3>Date Format</h3>
+<p>The date format used in all files is DD-MON-YY to ensure consistency
+across datasets.</p>
+</div>
 </div>
 <div id="extracting-volume-data-from-electronic-files" class="section level1">
 <h1>Extracting volume data from electronic files</h1>
@@ -1775,15 +1877,19 @@ BIONESS electronic files which were located for all except 1 historical
 mission slated to be archived.</p>
 <p>The elctronic file format was confirmed with Nelson Rice who wrote
 the original program to produce the files.</p>
+<p>The ectronic file log was generated manually with information from
+the logsheets, electronic files and taxonomic data. It includes columns
+- mission - tow - event - electronic_file_name - sample_id - net_number
+- volume</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShCSU9ORVNTUUMpXG5kYXRhcGF0aCA8LSAnUjovU2NpZW5jZS9CSU9EYXRhU3ZjL1NSQy9aUGxhbmt0b25fRGF0YVJlc2N1ZS9PR3JhZHlfMjAyNC9yYXdfZGF0YSdcbiMgR2F0aGVyIGFsbCBmaWxlcyBmb3IgSFVEMjAxNDAzMCAodGVzdCBtaXNzaW9uIHRvIGJlIGxvYWRlZCBmaXJzdClcbmVmaWxlcyA8LSByZWFkeGw6OnJlYWRfeGxzeCgnZWxlY3Ryb25pY19maWxlX2xvZy54bHN4JylcbmVmaWxlX3BhdGhzIDwtIGxpc3QoKVxuZm9yIChpIGluIDE6bGVuZ3RoKGVmaWxlcykpIHtcbiAgZWZpbGVfcGF0aHNbW2ldXSA8LSBsaXN0LmZpbGVzKGZpbGUucGF0aChkYXRhcGF0aCwgZWZpbGVzJG1pc3Npb25baV0pLFxuICAgICAgICAgICAgIHBhdHRlcm4gPSBlZmlsZXMkZWxlY3Ryb25pY19maWxlX25hbWVbaV0sXG4gICAgICAgICAgICAgcmVjdXJzaXZlID0gVFJVRSxcbiAgICAgICAgICAgICBmdWxsLm5hbWVzID0gVFJVRSlcbn1cblxuYmlvbmVzc2RhdGEgPC0gbGlzdCgpXG5mb3IgKGkgaW4gMTpsZW5ndGgoZWZpbGVfcGF0aHMpKSB7XG4gIGJpb25lc3NkYXRhW1tpXV0gPC0gcmVhZF9iaW9uZXNzKGVmaWxlX3BhdGhzW1tpXV0pXG59XG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShCSU9ORVNTUUMpXG5kYXRhcGF0aCA8LSAnUjovU2NpZW5jZS9CSU9EYXRhU3ZjL1NSQy9aUGxhbmt0b25fRGF0YVJlc2N1ZS9PR3JhZHlfMjAyNC9yYXdfZGF0YSdcbiMgR2F0aGVyIGFsbCBmaWxlcyBmb3IgSFVEMjAxNDAzMCAodGVzdCBtaXNzaW9uIHRvIGJlIGxvYWRlZCBmaXJzdClcbmVmaWxlcyA8LSByZWFkeGw6OnJlYWRfeGxzeCgnZWxlY3Ryb25pY19maWxlX2xvZy54bHN4JylcbmVmaWxlX3BhdGhzIDwtIGxpc3QoKVxuZm9yIChpIGluIDE6bGVuZ3RoKGVmaWxlcyRlbGVjdHJvbmljX2ZpbGVfbmFtZSkpIHtcbiAgZWZpbGVfcGF0aHNbW2ldXSA8LSBsaXN0LmZpbGVzKGZpbGUucGF0aChkYXRhcGF0aCwgZWZpbGVzJG1pc3Npb25baV0pLFxuICAgICAgICAgICAgIHBhdHRlcm4gPSBlZmlsZXMkZWxlY3Ryb25pY19maWxlX25hbWVbaV0sXG4gICAgICAgICAgICAgcmVjdXJzaXZlID0gVFJVRSxcbiAgICAgICAgICAgICBmdWxsLm5hbWVzID0gVFJVRSlcbn1cblxuYmlvbmVzc2RhdGEgPC0gbGlzdCgpXG5mb3IgKGkgaW4gMTpsZW5ndGgoZWZpbGVfcGF0aHMpKSB7XG4gIGJpb25lc3NkYXRhW1tpXV0gPC0gcmVhZF9iaW9uZXNzKGVmaWxlX3BhdGhzW1tpXV0pXG59XG5cbmBgYCJ9 -->
 <pre class="r"><code>library(BIONESSQC)
 datapath &lt;- &#39;R:/Science/BIODataSvc/SRC/ZPlankton_DataRescue/OGrady_2024/raw_data&#39;
 # Gather all files for HUD2014030 (test mission to be loaded first)
 efiles &lt;- readxl::read_xlsx(&#39;electronic_file_log.xlsx&#39;)
 efile_paths &lt;- list()
-for (i in 1:length(efiles)) {
+for (i in 1:length(efiles$electronic_file_name)) {
   efile_paths[[i]] &lt;- list.files(file.path(datapath, efiles$mission[i]),
              pattern = efiles$electronic_file_name[i],
              recursive = TRUE,
@@ -1793,21 +1899,9 @@ for (i in 1:length(efiles)) {
 bionessdata &lt;- list()
 for (i in 1:length(efile_paths)) {
   bionessdata[[i]] &lt;- read_bioness(efile_paths[[i]])
-}</code></pre>
+}
+</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiB0aWR5dmVyc2VcbuKUgOKUgCBBdHRhY2hpbmcgY29yZSB0aWR5dmVyc2UgcGFja2FnZXMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAIHRpZHl2ZXJzZSAyLjAuMCDilIDilIBcbuKclCBkcGx5ciAgICAgMS4xLjQgICAgIOKclCByZWFkciAgICAgMi4xLjVcbuKclCBmb3JjYXRzICAgMS4wLjAgICAgIOKclCBzdHJpbmdyICAgMS41LjFcbuKclCBnZ3Bsb3QyICAgMy40LjQgICAgIOKclCB0aWJibGUgICAgMy4yLjFcbuKclCBsdWJyaWRhdGUgMS45LjMgICAgIOKclCB0aWR5ciAgICAgMS4zLjBcbuKclCBwdXJyciAgICAgMS4wLjIgICAgIOKUgOKUgCBDb25mbGljdHMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAIHRpZHl2ZXJzZV9jb25mbGljdHMoKSDilIDilIBcbuKcliBkcGx5cjo6ZmlsdGVyKCkgbWFza3Mgc3RhdHM6OmZpbHRlcigpXG7inJYgZHBseXI6OmxhZygpICAgIG1hc2tzIHN0YXRzOjpsYWcoKVxu4oS5IFVzZSB0aGUgXHUwMDFiXTg7O2h0dHA6Ly9jb25mbGljdGVkLnItbGliLm9yZy9cdTAwMDdjb25mbGljdGVkIHBhY2thZ2VcdTAwMWJdODs7XHUwMDA3IHRvIGZvcmNlIGFsbCBjb25mbGljdHMgdG8gYmVjb21lIGVycm9yc0xvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogZnNcbldhcm5pbmc6IHBhY2thZ2Ug4oCYZnPigJkgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiA0LjMuM1xuIn0= -->
-<pre><code>Loading required package: tidyverse
-── Attaching core tidyverse packages ─────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.4.4     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.0
-✔ purrr     1.0.2     ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errorsLoading required package: fs
-Warning: package ‘fs’ was built under R version 4.3.3</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Once the electronic files were accessible in R, I was able to extract
@@ -1815,20 +1909,21 @@ the volume data to provide along with the plankton taxonomic data and
 other event metadata.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzeW50aGVzaXplIHZvbHVtZSBkYXRhIGluIGEgdGFibGUgZm9yIGxvYWRpbmdcbmZvciAoaSBpbiAxOmxlbmd0aChiaW9uZXNzZGF0YSkpIHtcbiAgIyBUT0RPIG5lZWRzIHRvIGluY2x1ZGUgc2FtcGxlIElEIGZyb20gZGF0YVxufVxuXG4jIG91dHB1dCBzaG91bGQgYmUgdGFibGUgd2l0aCBtaXNzaW9uLCBldmVudCwgdG93LCBzYW1wbGUgaWQsIHZvbHVtZVxuYGBgIn0= -->
-<pre class="r"><code># synthesize volume data in a table for loading
-for (i in 1:length(bionessdata)) {
-  # TODO needs to include sample ID from data
-}
-
-# output should be table with mission, event, tow, sample id, volume</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsZS5wYXRoKGRhdGFwYXRoLCAnSFVEMjAxNDAzMC9IVUQyMDE0MDMwX2VsZWN0cm9uaWNfZmlsZV9sb2cueGxzeCcpXG5cbmBgYCJ9 -->
+<pre class="r"><code>file.path(datapath, &#39;HUD2014030/HUD2014030_electronic_file_log.xlsx&#39;)
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiUjovU2NpZW5jZS9CSU9EYXRhU3ZjL1NSQy9aUGxhbmt0b25fRGF0YVJlc2N1ZS9PR3JhZHlfMjAyNC9yYXdfZGF0YS9IVUQyMDE0MDMwL0hVRDIwMTQwMzBfZWxlY3Ryb25pY19maWxlX2xvZy54bHN4XCJcbiJ9 -->
+<pre><code>[1] &quot;R:/Science/BIODataSvc/SRC/ZPlankton_DataRescue/OGrady_2024/raw_data/HUD2014030/HUD2014030_electronic_file_log.xlsx&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Volume data is combined with other metadata including event, and
+sample ID to be matched up to taxonomic data.</p>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkhpc3RvcmljYWwgQmlvQ2hlbSBBcmNoaXZhbCINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KYXV0aG9yOiAiRW1pbHkgTydHcmFkeSINCi0tLQ0KVGhpcyBSIG1hcmtkb3duIG91dGxpbmVzIHRoZSBzdGVwcyB0YWtlbiB0byBhcmNoaXZlIGhpc3RvcmljYWwgQklPTkVTUyBkYXRhIGluIEJpb0NoZW0uDQpUaGlzIHByb2plY3Qgd2FzIHVuZGVydGFrZW4gdW5kZXIgdGhlIGRpcmVjdGlvbiBvZiBDYXRoZXJpbmUgSm9obnNvbiBhdCBGaXNoZXJpZXMgYW5kIE9jZWFucw0KQ2FuYWRhLCBNYXJpdGltZXMgUmVnaW9uIE9jZWFuIEVjb3N5c3RlbXMgU2NpZW5jZSBEaXZpc2lvbi4NCg0KIyBEYXRhIGNsZWFuaW5nIGFuZCBmb3JtYXR0aW5nDQoNCiMgTWV0YWRhdGEgY2xlYW5pbmcgYW5kIHN1cHBsZW1lbnRpbmcNCg0KIyBMb2FkIGZpbGUgZm9ybWF0cw0KDQojIEV4dHJhY3Rpbmcgdm9sdW1lIGRhdGEgZnJvbSBlbGVjdHJvbmljIGZpbGVzDQoNCkluIG9yZGVyIHRvIHByb3Blcmx5IHJlcHJlc2VudCB0aGUgcGxhbmt0b24gZGF0YSBpbiBCaW9DaGVtLCB0aGUgc2FtcGxlZCB2b2x1bWUNCmluZm9ybWF0aW9uIHdhcyBlc3NlbnRpYWwuIFRoaXMgbWV0YWRhdGEgd2FzIGZvdW5kIGluIHRoZSBCSU9ORVNTIGVsZWN0cm9uaWMgZmlsZXMNCndoaWNoIHdlcmUgbG9jYXRlZCBmb3IgYWxsIGV4Y2VwdCAxIGhpc3RvcmljYWwgbWlzc2lvbiBzbGF0ZWQgdG8gYmUgYXJjaGl2ZWQuDQoNClRoZSBlbGN0cm9uaWMgZmlsZSBmb3JtYXQgd2FzIGNvbmZpcm1lZCB3aXRoIE5lbHNvbiBSaWNlIHdobyB3cm90ZSB0aGUgb3JpZ2luYWwNCnByb2dyYW0gdG8gcHJvZHVjZSB0aGUgZmlsZXMuIA0KDQpgYGB7cn0NCmxpYnJhcnkoQklPTkVTU1FDKQ0KZGF0YXBhdGggPC0gJ1I6L1NjaWVuY2UvQklPRGF0YVN2Yy9TUkMvWlBsYW5rdG9uX0RhdGFSZXNjdWUvT0dyYWR5XzIwMjQvcmF3X2RhdGEnDQojIEdhdGhlciBhbGwgZmlsZXMgZm9yIEhVRDIwMTQwMzAgKHRlc3QgbWlzc2lvbiB0byBiZSBsb2FkZWQgZmlyc3QpDQplZmlsZXMgPC0gcmVhZHhsOjpyZWFkX3hsc3goJ2VsZWN0cm9uaWNfZmlsZV9sb2cueGxzeCcpDQplZmlsZV9wYXRocyA8LSBsaXN0KCkNCmZvciAoaSBpbiAxOmxlbmd0aChlZmlsZXMpKSB7DQogIGVmaWxlX3BhdGhzW1tpXV0gPC0gbGlzdC5maWxlcyhmaWxlLnBhdGgoZGF0YXBhdGgsIGVmaWxlcyRtaXNzaW9uW2ldKSwNCiAgICAgICAgICAgICBwYXR0ZXJuID0gZWZpbGVzJGVsZWN0cm9uaWNfZmlsZV9uYW1lW2ldLA0KICAgICAgICAgICAgIHJlY3Vyc2l2ZSA9IFRSVUUsDQogICAgICAgICAgICAgZnVsbC5uYW1lcyA9IFRSVUUpDQp9DQoNCmJpb25lc3NkYXRhIDwtIGxpc3QoKQ0KZm9yIChpIGluIDE6bGVuZ3RoKGVmaWxlX3BhdGhzKSkgew0KICBiaW9uZXNzZGF0YVtbaV1dIDwtIHJlYWRfYmlvbmVzcyhlZmlsZV9wYXRoc1tbaV1dKQ0KfQ0KDQpgYGANCg0KDQpPbmNlIHRoZSBlbGVjdHJvbmljIGZpbGVzIHdlcmUgYWNjZXNzaWJsZSBpbiBSLCBJIHdhcyBhYmxlIHRvIGV4dHJhY3QgdGhlIHZvbHVtZSANCmRhdGEgdG8gcHJvdmlkZSBhbG9uZyB3aXRoIHRoZSBwbGFua3RvbiB0YXhvbm9taWMgZGF0YSBhbmQgb3RoZXIgZXZlbnQgbWV0YWRhdGEuDQoNCmBgYHtyfQ0KIyBzeW50aGVzaXplIHZvbHVtZSBkYXRhIGluIGEgdGFibGUgZm9yIGxvYWRpbmcNCmZvciAoaSBpbiAxOmxlbmd0aChiaW9uZXNzZGF0YSkpIHsNCiAgIyBUT0RPIG5lZWRzIHRvIGluY2x1ZGUgc2FtcGxlIElEIGZyb20gZGF0YQ0KfQ0KDQojIG91dHB1dCBzaG91bGQgYmUgdGFibGUgd2l0aCBtaXNzaW9uLCBldmVudCwgdG93LCBzYW1wbGUgaWQsIHZvbHVtZQ0KYGBgDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkhpc3RvcmljYWwgQmlvQ2hlbSBBcmNoaXZhbCINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KYXV0aG9yOiAiRW1pbHkgTydHcmFkeSINCi0tLQ0KVGhpcyBSIG1hcmtkb3duIG91dGxpbmVzIHRoZSBzdGVwcyB0YWtlbiB0byBhcmNoaXZlIGhpc3RvcmljYWwgQklPTkVTUyBkYXRhIGluIEJpb0NoZW0uDQpUaGlzIHByb2plY3Qgd2FzIHVuZGVydGFrZW4gdW5kZXIgdGhlIGRpcmVjdGlvbiBvZiBDYXRoZXJpbmUgSm9obnNvbiBhdCBGaXNoZXJpZXMgYW5kIE9jZWFucw0KQ2FuYWRhLCBNYXJpdGltZXMgUmVnaW9uIE9jZWFuIEVjb3N5c3RlbXMgU2NpZW5jZSBEaXZpc2lvbi4NCg0KVGhpcyByZXBvcnQgc3VtbWFyaXplcyB0aGUgY29tcGxldGlvbiBvZiB0aGUgcHJvamVjdCBpbnZvbHZpbmcgdGhlIGNvbnNvbGlkYXRpb24gYW5kIHF1YWxpdHkgY29udHJvbCBvZiBwbGFua3RvbiBkYXRhIGZyb20gdmFyaW91cyBtaXNzaW9ucy4gVGhlIGRhdGEgd2FzIGNvbnNvbGlkYXRlZCBmcm9tIHZhcmlvdXMgbG9jYXRpb25zIGFuZCBzaGFyZWQgZm9sZGVycyBhdCBCZWRmb3JkIEluc3RpdHV0ZSBvZiBPY2Vhbm9ncmFwaHkuDQoNCiMgRGF0YSBjbGVhbmluZyBhbmQgZm9ybWF0dGluZw0KDQpUaGUgcmF3IGRhdGEgd2FzIGNvbnNvbGlkYXRlZCBpbnRvIGEgc2luZ2xlIGZvbGRlciBmb3IgZWFjaCBjcnVpc2UsIHNvdXJjZWQgZnJvbSBTaGVsbGV5J3MgaW52ZXN0aWdhdGl2ZSBmb2xkZXJzIGFuZCBTUkMgY3J1aXNlIGZvbGRlcnMuIFdlIGNoZWNrZWQgdGhlIHBsYW5rdG9uIGRhdGEgbG9hZGVkIHRvIEJpb0NoZW0gZm9yIGVhY2ggbWlzc2lvbiwgbm90aW5nIHRoYXQgbm9uZSBpbmNsdWRlZCBCSU9ORVNTIGRhdGEuIE1ldGFkYXRhIHdhcyBjaGVja2VkIGZvciBlYWNoIG1pc3Npb24sIGFuZCBCSU9ORVNTIGxvZyBzaGVldHMgd2VyZSBtb3ZlZCBpbnRvIGVhY2ggY3J1aXNlIGZvbGRlciBzaW5jZSBtb3N0IG1pc3Npb25zIHJlcXVpcmVkIGF0IGxlYXN0IHNvbWUgbWV0YWRhdGEgZnJvbSB0aGUgbG9ncyB0byBiZSBpbnB1dC4NCg0KQSBkaXNjdXNzaW9uIHdpdGggUmViZWNjYSBNaWxuZSBwcm9tcHRlZCB0aGUgb3JnYW5pemF0aW9uIG9mIGRhdGEgYWNjb3VudGluZyBieSBpbmRpdmlkdWFsIHN0YXRpb24sIGFzIGRhdGEgd2FzIG9mdGVuIGFuYWx5emVkIGJ5IGxvY2F0aW9uIHJhdGhlciB0aGFuIG1pc3Npb24uIEZvciBleGFtcGxlLCBHdWxseSB0b3dzIGZyb20gMjAwMy0yMDEwIHdlcmUgYW5hbHl6ZWQgdG9nZXRoZXIsIGxpa2VseSBkdWUgdG8gZnVuZGluZyBvcmdhbml6YXRpb24uIFdlIHJldmlld2VkIGxvZyBzaGVldHMgYW5kIHNldCB1cCBhbiBhY2NvdW50aW5nIHNwcmVhZHNoZWV0IGZvciAyMDA5LTIwMTYgZGF0YSBieSBtaXNzaW9uIGFuZCBzdGF0aW9uLiANCg0KKiBIb3cgbWFueSBtaXNzaW9ucyBhbmQgc3RhdGlvbnMgd2VyZSBhcmNoaXZlZCBhcyBwYXJ0IG9mIHRoaXMgcHJvamVjdCogDQoNCiogVGFibGUgb2YgZGF0YSBpbmNsdWRlZCAqDQoNCg0KDQojIE1ldGFkYXRhIGNsZWFuaW5nIGFuZCBzdXBwbGVtZW50aW5nDQoNClRoZSBwcm9jZXNzIG9mIG1ldGFkYXRhIGNsZWFuaW5nIGFuZCBzdXBwbGVtZW50aW5nIHdhcyBhIGNydWNpYWwgc3RlcCBpbiBlbnN1cmluZyB0aGUgaW50ZWdyaXR5IGFuZCB1c2FiaWxpdHkgb2YgdGhlIHBsYW5rdG9uIGRhdGEgZm9yIGZ1dHVyZSBhbmFseXNlcyBhbmQgZGF0YSBjb2xsZWN0aW9uIGVmZm9ydHMuDQoNCiMjIyBJbml0aWFsIEFzc2Vzc21lbnQgYW5kIENvbnNvbGlkYXRpb24NCg0KVGhlIGZpcnN0IHN0ZXAgaW52b2x2ZWQgY29uc29saWRhdGluZyByYXcgZGF0YSBmcm9tIHZhcmlvdXMgc291cmNlcyBpbnRvIGEgc2luZ2xlIGZvbGRlciBmb3IgZWFjaCBjcnVpc2UuIFRoaXMgaW5jbHVkZWQgZGF0YSBmcm9tIFNoZWxsZXkncyBpbnZlc3RpZ2F0aXZlIGZvbGRlcnMgYW5kIFNSQyBjcnVpc2UgZm9sZGVycy4gV2UgdGhlbiBjaGVja2VkIHRoZSBwbGFua3RvbiBkYXRhIGxvYWRlZCB0byBCaW9DaGVtIGZvciBlYWNoIG1pc3Npb24sIGVuc3VyaW5nIHRoYXQgbm8gQklPTkVTUyBkYXRhIHdhcyBpbmNsdWRlZCBpbml0aWFsbHkuDQoNCiMjIyBJZGVudGlmeWluZyBNZXRhZGF0YSBHYXBzDQoNCkR1cmluZyB0aGUgaW5pdGlhbCBhc3Nlc3NtZW50LCB3ZSBpZGVudGlmaWVkIHNldmVyYWwgZ2FwcyBhbmQgaW5jb25zaXN0ZW5jaWVzIGluIHRoZSBtZXRhZGF0YS4gQ29tbW9uIGlzc3VlcyBpbmNsdWRlZCBtaXNzaW5nIHNhbXBsZSBJRHMsIHNvdW5kaW5nIGRhdGEsIGFuZCBkaXNjcmVwYW5jaWVzIGluIGRhdGUgZm9ybWF0cy4gU291bmRpbmcgZGF0YSwgdHlwaWNhbGx5IHJlY29yZGVkIG9uIEJJT05FU1MgbG9nIHNoZWV0cywgd2FzIG9mdGVuIG1pc3NpbmcgYW5kIG5lZWRlZCB0byBiZSBlbnRlcmVkIG1hbnVhbGx5LiBTYW1wbGUgSURzIHdlcmUgaW5jb25zaXN0ZW50bHkgcmVjb3JkZWQsIHNvbWV0aW1lcyB1c2luZyBzdGlja2VycyBvbiB0aGUgQklPTkVTUyBsb2dzLCB3aGljaCByZXF1aXJlZCB1cyB0byBnZW5lcmF0ZSBuZXcgdW5pcXVlIElEcyBmb3IgY2VydGFpbiBtaXNzaW9ucy4NCg0KIyMjIFN0YW5kYXJkaXppbmcgTWV0YWRhdGENCg0KVG8gYWRkcmVzcyB0aGVzZSBpc3N1ZXMsIHdlIHN0YW5kYXJkaXplZCB0aGUgbWV0YWRhdGEgYWNyb3NzIGFsbCBmaWxlcy4gVGhpcyBpbnZvbHZlZDoNCg0KRW5zdXJpbmcgY29uc2lzdGVudCBkYXRlIGZvcm1hdHMgKERELU1PTi1ZWSkuDQpTdGFuZGFyZGl6aW5nIGNvbHVtbiBuYW1lcyBhbmQgbWV0YWRhdGEgZm9ybWF0dGluZywgaW5jbHVkaW5nIGRhdGVzIGFuZCBnZWFyIHJlcHJlc2VudGF0aW9uLg0KQWRkaW5nIG1pc3NpbmcgbWV0YWRhdGEgbWFudWFsbHkgZnJvbSBoYW5kd3JpdHRlbiBsb2cgc2hlZXRzLCBzdWNoIGFzIGV2ZW50IG51bWJlcnMsIGRhdGVzLCBhbmQgc2FtcGxlIElEcy4NClF1YWxpdHkgQ29udHJvbCBhbmQgVmFsaWRhdGlvbg0KUXVhbGl0eSBjb250cm9sIHdhcyBhIGNyaXRpY2FsIHBhcnQgb2YgdGhlIG1ldGFkYXRhIGNsZWFuaW5nIHByb2Nlc3MuIFdlIGNvbmR1Y3RlZCB0aG9yb3VnaCBjaGVja3MgdG8gZW5zdXJlOg0KDQpEYXRlcyBtYXRjaGVkIGJldHdlZW4gbG9nIHNoZWV0cyBhbmQgZGF0YS4NClN0YXJ0IGFuZCBlbmQgZGVwdGhzIHdlcmUgY29uc2lzdGVudCBiZXR3ZWVuIGxvZyBzaGVldHMgYW5kIGRhdGEuDQpUb3ctc2FtcGxlIG1hdGNoZXMgd2VyZSBhY2N1cmF0ZS4NCkV2ZW50IG51bWJlcnMgd2VyZSBjb25zaXN0ZW50IGFjcm9zcyBsb2cgc2hlZXRzIGFuZCBkYXRhLg0KUmVzdWx0cyBvZiB0aGVzZSBjaGVja3Mgd2VyZSByZWNvcmRlZCBpbiBhIHRyYWNraW5nIHNwcmVhZHNoZWV0LCBhbmQgYW55IGluY29uc2lzdGVuY2llcyB3ZXJlIGRvY3VtZW50ZWQgaW4gYSBtZXRhZGF0YSBkaXNjcmVwYW5jaWVzIGZpbGUuDQoNCiMjIyBTdXBwbGVtZW50aW5nIE1ldGFkYXRhDQoNCkluIGNhc2VzIHdoZXJlIG1ldGFkYXRhIHdhcyBtaXNzaW5nIG9yIGluY29tcGxldGUsIHdlIHN1cHBsZW1lbnRlZCBpdCB1c2luZyB2YXJpb3VzIG1ldGhvZHM6DQoNCkZpbGxpbmcgaW4gc2FtcGxlIElEcyB1c2luZyBhIGNvbXBvdW5kIElEIGZvcm11bGEgd2hlcmUgbmVjZXNzYXJ5Lg0KQ29uZmlybWluZyBtZXRhZGF0YSB3aXRoIHRlYW0gbWVtYmVycywgc3VjaCBhcyBjaGVja2luZyB3aGF0IHdhcyB3cml0dGVuIG9uIHNhbXBsZSBib3R0bGVzIHdoZW4gc3RpY2tlcnMgd2VyZSBub3QgdXNlZC4NClVzaW5nIGVsb2cgZmlsZXMgdG8gcmVjcmVhdGUgbWlzc2luZyBtZXRhZGF0YSwgZW5zdXJpbmcgaXQgbWF0Y2hlZCBleHBlY3RhdGlvbnMgYW5kIGNvdWxkIGJlIGxvYWRlZCB0aHJvdWdoIHRoZSB1c3VhbCB0ZW1wbGF0ZSBwcm9jZWR1cmVzLg0KRmluYWwgU3RlcHMNClRoZSBmaW5hbCBjb21iaW5lZCBtaXNzaW9uIGZpbGVzIHdlcmUgc3RvcmVkIGluIGEgZGVzaWduYXRlZCBmb2xkZXIgYW5kIHJlY29yZGVkIG9uIGEgdHJhY2tpbmcgc2hlZXQuIEEgbWVldGluZyB3aXRoIE9ESVMgY29uZmlybWVkIHRoZSBsb2FkaW5nIHByb2NlZHVyZSwgZW5zdXJpbmcgdGhhdCB0aGUgY29ycmVjdCBtZXRhZGF0YSB3YXMgaW5jbHVkZWQgYW5kIHRoYXQgQmlvQ2hlbSBydWxlcyB3ZXJlIGZvbGxvd2VkIHJlZ2FyZGluZyBmb3JtYXR0aW5nLg0KDQpCeSBtZXRpY3Vsb3VzbHkgY2xlYW5pbmcgYW5kIHN1cHBsZW1lbnRpbmcgdGhlIG1ldGFkYXRhLCB3ZSBlbnN1cmVkIHRoYXQgdGhlIHBsYW5rdG9uIGRhdGEgaXMgcmVsaWFibGUgYW5kIHJlYWR5IGZvciBmdXR1cmUgYW5hbHlzZXMuIFRoaXMgcHJvY2VzcyBhbHNvIGVzdGFibGlzaGVkIGEgcm9idXN0IGZyYW1ld29yayBmb3IgaGFuZGxpbmcgbWV0YWRhdGEgaW4gZnV0dXJlIGRhdGEgY29sbGVjdGlvbiBlZmZvcnRzLCBlbmhhbmNpbmcgdGhlIG92ZXJhbGwgcXVhbGl0eSBhbmQgdXNhYmlsaXR5IG9mIHRoZSBkYXRhLg0KDQojIExvYWQgZmlsZSBmb3JtYXRzDQpUaGUgc3RhbmRhcmRpemVkIGZvcm1hdCBvZiB0aGUgZmlsZXMgaXMgZXNzZW50aWFsIGZvciBlbnN1cmluZyBjb25zaXN0ZW5jeSBhbmQgZWFzZSBvZiB1c2UgaW4gZnV0dXJlIGFuYWx5c2VzLiBFYWNoIGZpbGUgZm9sbG93cyBhIHNwZWNpZmljIHN0cnVjdHVyZSB3aXRoIGNsZWFybHkgZGVmaW5lZCBjb2x1bW5zLiBCZWxvdyBpcyBhbiBvdmVydmlldyBvZiB0aGUgZmlsZSBmb3JtYXQsIGluY2x1ZGluZyBhIHRhYmxlIHdpdGggc3BhY2UgZm9yIGNvbHVtbiBkZWZpbml0aW9ucy4NCg0KU3RhbmRhcmRpemVkIEZpbGUgU3RydWN0dXJlDQpFYWNoIGZpbGUgY29udGFpbnMgdGhlIGZvbGxvd2luZyBjb2x1bW5zOg0KDQoqIGZvcm1hdCBpbnRvIHRhYmxlKg0KQ29sdW1uIE5hbWUJRGVmaW5pdGlvbg0KTUlTU0lPTglQcm92aWRlIGRlZmluaXRpb24gaGVyZQ0KREFURQlQcm92aWRlIGRlZmluaXRpb24gaGVyZQ0KU1ROCVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQpUT1cjCVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQpHRUFSCVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQpFVkVOVAlQcm92aWRlIGRlZmluaXRpb24gaGVyZQ0KU0FNUExFSUQJUHJvdmlkZSBkZWZpbml0aW9uIGhlcmUNClNUQVJUX0RFUFRICVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQpFTkRfREVQVEgJUHJvdmlkZSBkZWZpbml0aW9uIGhlcmUNCkFOQUxZU0lTCVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQpTUExJVAlQcm92aWRlIGRlZmluaXRpb24gaGVyZQ0KQUxJUVVPVAlQcm92aWRlIGRlZmluaXRpb24gaGVyZQ0KU1BMSVRfRlJBQ1RJT04JUHJvdmlkZSBkZWZpbml0aW9uIGhlcmUNClRBWEEJUHJvdmlkZSBkZWZpbml0aW9uIGhlcmUNCk5DT0RFCVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQpTVEFHRQlQcm92aWRlIGRlZmluaXRpb24gaGVyZQ0KU0VYCVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQpEQVRBX1ZBTFVFCVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQpQUk9DX0NPREUJUHJvdmlkZSBkZWZpbml0aW9uIGhlcmUNCldIQVRfV0FTX0lUCVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQpDT01NRU5UCVByb3ZpZGUgZGVmaW5pdGlvbiBoZXJlDQoNCiMjIyBEYXRlIEZvcm1hdA0KDQpUaGUgZGF0ZSBmb3JtYXQgdXNlZCBpbiBhbGwgZmlsZXMgaXMgREQtTU9OLVlZIHRvIGVuc3VyZSBjb25zaXN0ZW5jeSBhY3Jvc3MgZGF0YXNldHMuDQoNCiMgRXh0cmFjdGluZyB2b2x1bWUgZGF0YSBmcm9tIGVsZWN0cm9uaWMgZmlsZXMNCg0KSW4gb3JkZXIgdG8gcHJvcGVybHkgcmVwcmVzZW50IHRoZSBwbGFua3RvbiBkYXRhIGluIEJpb0NoZW0sIHRoZSBzYW1wbGVkIHZvbHVtZQ0KaW5mb3JtYXRpb24gd2FzIGVzc2VudGlhbC4gVGhpcyBtZXRhZGF0YSB3YXMgZm91bmQgaW4gdGhlIEJJT05FU1MgZWxlY3Ryb25pYyBmaWxlcw0Kd2hpY2ggd2VyZSBsb2NhdGVkIGZvciBhbGwgZXhjZXB0IDEgaGlzdG9yaWNhbCBtaXNzaW9uIHNsYXRlZCB0byBiZSBhcmNoaXZlZC4NCg0KVGhlIGVsY3Ryb25pYyBmaWxlIGZvcm1hdCB3YXMgY29uZmlybWVkIHdpdGggTmVsc29uIFJpY2Ugd2hvIHdyb3RlIHRoZSBvcmlnaW5hbA0KcHJvZ3JhbSB0byBwcm9kdWNlIHRoZSBmaWxlcy4gDQoNClRoZSBlY3Ryb25pYyBmaWxlIGxvZyB3YXMgZ2VuZXJhdGVkIG1hbnVhbGx5IHdpdGggaW5mb3JtYXRpb24gZnJvbSB0aGUgDQpsb2dzaGVldHMsIGVsZWN0cm9uaWMgZmlsZXMgYW5kIHRheG9ub21pYyBkYXRhLiBJdCBpbmNsdWRlcyBjb2x1bW5zDQogIC0gbWlzc2lvbg0KICAtIHRvdw0KICAtIGV2ZW50DQogIC0gZWxlY3Ryb25pY19maWxlX25hbWUNCiAgLSBzYW1wbGVfaWQNCiAgLSBuZXRfbnVtYmVyDQogIC0gdm9sdW1lDQoNCmBgYHtyfQ0KbGlicmFyeShCSU9ORVNTUUMpDQpkYXRhcGF0aCA8LSAnUjovU2NpZW5jZS9CSU9EYXRhU3ZjL1NSQy9aUGxhbmt0b25fRGF0YVJlc2N1ZS9PR3JhZHlfMjAyNC9yYXdfZGF0YScNCiMgR2F0aGVyIGFsbCBmaWxlcyBmb3IgSFVEMjAxNDAzMCAodGVzdCBtaXNzaW9uIHRvIGJlIGxvYWRlZCBmaXJzdCkNCmVmaWxlcyA8LSByZWFkeGw6OnJlYWRfeGxzeChmaWxlLnBhdGgoZGF0YXBhdGgsICdIVUQyMDE0MDMwL0hVRDIwMTQwMzBfZWxlY3Ryb25pY19maWxlX2xvZy54bHN4JykpDQplZmlsZV9wYXRocyA8LSBsaXN0KCkNCmZvciAoaSBpbiAxOmxlbmd0aChlZmlsZXMkZWxlY3Ryb25pY19maWxlX25hbWUpKSB7DQogIGVmaWxlX3BhdGhzW1tpXV0gPC0gbGlzdC5maWxlcyhmaWxlLnBhdGgoZGF0YXBhdGgsIGVmaWxlcyRtaXNzaW9uW2ldKSwNCiAgICAgICAgICAgICBwYXR0ZXJuID0gZWZpbGVzJGVsZWN0cm9uaWNfZmlsZV9uYW1lW2ldLA0KICAgICAgICAgICAgIHJlY3Vyc2l2ZSA9IFRSVUUsDQogICAgICAgICAgICAgZnVsbC5uYW1lcyA9IFRSVUUpDQp9DQoNCmJpb25lc3NkYXRhIDwtIGxpc3QoKQ0KZm9yIChpIGluIDE6bGVuZ3RoKGVmaWxlX3BhdGhzKSkgew0KICBiaW9uZXNzZGF0YVtbaV1dIDwtIHJlYWRfYmlvbmVzcyhlZmlsZV9wYXRoc1tbaV1dKQ0KfQ0KDQpgYGANCg0KDQpPbmNlIHRoZSBlbGVjdHJvbmljIGZpbGVzIHdlcmUgYWNjZXNzaWJsZSBpbiBSLCBJIHdhcyBhYmxlIHRvIGV4dHJhY3QgdGhlIHZvbHVtZSANCmRhdGEgdG8gcHJvdmlkZSBhbG9uZyB3aXRoIHRoZSBwbGFua3RvbiB0YXhvbm9taWMgZGF0YSBhbmQgb3RoZXIgZXZlbnQgbWV0YWRhdGEuDQoNCmBgYHtyfQ0KIyBSZWFkIHRoZSB2b2x1bWUgdGFibGUNCnZvbF90YWJsZSA8LSByZWFkeGw6OnJlYWRfeGxzeChmaWxlLnBhdGgoZGF0YXBhdGgsICdIVUQyMDE0MDMwL0hVRDIwMTQwMzBfZWxlY3Ryb25pY19maWxlX2xvZy54bHN4JykpDQoNCiMgU3ludGhlc2l6ZSB2b2x1bWUgZGF0YSBpbiBhIHRhYmxlIGZvciBsb2FkaW5nDQp2b2xfZnVsbCA8LSBtYXBfZGZyKGJpb25lc3NkYXRhLCBmdW5jdGlvbihlZmlsZWRhdCkgew0KICBldmVudF9udW0gPC0gYXMubnVtZXJpYyhlZmlsZWRhdCRtZXRhZGF0YSRgRXZlbnQgI2ApDQogIG5ldF9udW1zIDwtIGFzLm51bWVyaWMoc3RyX2V4dHJhY3QoZWZpbGVkYXQkZGF0YSRuZXRfbnVtYmVyLCAiXFxkKyIpKQ0KICB2b2x1bWUgPC0gYXMubnVtZXJpYyhlZmlsZWRhdCRkYXRhJHZvbHVtZSkNCiAgDQogIHZvbF9kYXQgPC0gZGF0YS5mcmFtZShldmVudF9udW0sIG5ldF9udW1zLCB2b2x1bWUpDQogIA0KICB2b2xfdGFibGUgJT4lDQogICAgc2VsZWN0KC12b2x1bWUpICU+JQ0KICAgIGlubmVyX2pvaW4odm9sX2RhdCwgYnkgPSBjKCdldmVudCcgPSAnZXZlbnRfbnVtJywgJ25ldF9udW1iZXInID0gJ25ldF9udW1zJykpDQp9KQ0KDQp4bHN4Ojp3cml0ZS54bHN4KHggPSB2b2xfZnVsbCwNCiAgICAgICAgICAgICAgICAgZmlsZSA9IGZpbGUucGF0aChkYXRhcGF0aCwgJ0hVRDIwMTQwMzAvSFVEMjAxNDAzMF9lbGVjdHJvbmljX2ZpbGVfbG9nLnhsc3gnKQ0KICAgICAgICAgICAgICAgICApDQpgYGANCg0KVm9sdW1lIGRhdGEgaXMgY29tYmluZWQgd2l0aCBvdGhlciBtZXRhZGF0YSBpbmNsdWRpbmcgZXZlbnQsIGFuZCBzYW1wbGUgSUQgdG8gYmUNCm1hdGNoZWQgdXAgdG8gdGF4b25vbWljIGRhdGEuDQo=</div>
 
 
 
