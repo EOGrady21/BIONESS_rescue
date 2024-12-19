@@ -1,5 +1,5 @@
 ---
-title: "Historical BioChem Archival"
+title: "Historical BIONESS Archival"
 output: html_notebook
 author: "Emily O'Grady"
 ---
@@ -7,11 +7,11 @@ This R markdown outlines the steps taken to archive historical BIONESS data in B
 This project was undertaken under the direction of Catherine Johnson at Fisheries and Oceans
 Canada, Maritimes Region Ocean Ecosystems Science Division.
 
-This report summarizes the completion of the project involving the consolidation and quality control of plankton data from various missions. The data was consolidated from various locations and shared folders at Bedford Institute of Oceanography.
+This report summarizes the completion of the project involving the consolidation and quality control of plankton data from various missions. The data was consolidated from various locations and shared folders at Bedford Institute of Oceanography from missions between 2009 and 2016. 
 
 # Data cleaning and formatting
 
-The raw data was consolidated into a single folder for each cruise, sourced from Shelley's investigative folders and SRC cruise folders. We checked the plankton data loaded to BioChem for each mission, noting that none included BIONESS data. Metadata was checked for each mission, and BIONESS log sheets were moved into each cruise folder since most missions required at least some metadata from the logs to be input.
+The raw data was consolidated into a single folder for each cruise, sourced from various locations. We checked the plankton data loaded to BioChem for each mission, noting that none included BIONESS data. Metadata was checked for each mission, and BIONESS log sheets were found for each mission since most missions required at least some metadata from the logs to be input.
 
 A discussion with Rebecca Milne prompted the organization of data accounting by individual station, as data was often analyzed by location rather than mission. For example, Gully tows from 2003-2010 were analyzed together, likely due to funding organization. We reviewed log sheets and set up an accounting spreadsheet for 2009-2016 data by mission and station. 
 
@@ -23,15 +23,15 @@ A discussion with Rebecca Milne prompted the organization of data accounting by 
 
 # Metadata cleaning and supplementing
 
-The process of metadata cleaning and supplementing was a crucial step in ensuring the integrity and usability of the plankton data for future analyses and data collection efforts.
+The process of metadata cleaning and supplementing was a crucial step in ensuring the integrity and usability of the plankton data for future analyses.
 
 ### Initial Assessment and Consolidation
 
-The first step involved consolidating raw data from various sources into a single folder for each cruise. This included data from Shelley's investigative folders and SRC cruise folders. We then checked the plankton data loaded to BioChem for each mission, ensuring that no BIONESS data was included initially.
+The first step involved consolidating raw data from various sources into a single folder for each cruise. This included data from Shelley Bond's investigative folders (from Mary Kennedy's archives) and SRC cruise folders. We then conducted an initial assessment of the metadata to identify gaps and inconsistencies.
 
 ### Identifying Metadata Gaps
 
-During the initial assessment, we identified several gaps and inconsistencies in the metadata. Common issues included missing sample IDs, sounding data, and discrepancies in date formats. Sounding data, typically recorded on BIONESS log sheets, was often missing and needed to be entered manually. Sample IDs were inconsistently recorded, sometimes using stickers on the BIONESS logs, which required us to generate new unique IDs for certain missions.
+During the initial assessment, we identified several gaps and inconsistencies in the metadata. Common issues included missing sample IDs, sounding data, and discrepancies in date formats. Sounding data, typically recorded on BIONESS log sheets, was often missing and needed to be entered manually. Sample IDs were inconsistently recorded,and stickers were not used on some missions, required compound unique sample IDs to be generated. In those cases (*list missions*), the formaula used to create compound sample IDs followed Mary Kennedy's procdures: *compound sample ID formula*
 
 ### Standardizing Metadata
 
@@ -40,29 +40,29 @@ To address these issues, we standardized the metadata across all files. This inv
 Ensuring consistent date formats (DD-MON-YY).
 Standardizing column names and metadata formatting, including dates and gear representation.
 Adding missing metadata manually from handwritten log sheets, such as event numbers, dates, and sample IDs.
-Quality Control and Validation
+
+### Quality Control and Validation
+
 Quality control was a critical part of the metadata cleaning process. We conducted thorough checks to ensure:
 
-Dates matched between log sheets and data.
-Start and end depths were consistent between log sheets and data.
-Tow-sample matches were accurate.
-Event numbers were consistent across log sheets and data.
-Results of these checks were recorded in a tracking spreadsheet, and any inconsistencies were documented in a metadata discrepancies file.
+- Dates matched between log sheets and data.
+- Start and end depths were consistent between log sheets and data.
+- Tow-sample matches were accurate.
+- Event numbers were consistent across log sheets and data.
+- Results of these checks were recorded in a tracking spreadsheet, and any inconsistencies were documented in a metadata discrepancies file.
 
 ### Supplementing Metadata
 
 In cases where metadata was missing or incomplete, we supplemented it using various methods:
 
-Filling in sample IDs using a compound ID formula where necessary.
-Confirming metadata with team members, such as checking what was written on sample bottles when stickers were not used.
-Using elog files to recreate missing metadata, ensuring it matched expectations and could be loaded through the usual template procedures.
-Final Steps
-The final combined mission files were stored in a designated folder and recorded on a tracking sheet. A meeting with ODIS confirmed the loading procedure, ensuring that the correct metadata was included and that BioChem rules were followed regarding formatting.
+- Filling in sample IDs using a compound ID formula where necessary.
+- Confirming metadata with team members, such as checking what was written on sample bottles when stickers were not used.
 
-By meticulously cleaning and supplementing the metadata, we ensured that the plankton data is reliable and ready for future analyses. This process also established a robust framework for handling metadata in future data collection efforts, enhancing the overall quality and usability of the data.
+In some older missions (pre 2014), there were no elog or equivalent files. In these cases, elog tables were manually generated from handwritten bridge log and BIONESS log sheet information. These elog files match the format used to load elog metadata into the AZMP template. 
+
 
 # Load file formats
-The standardized format of the files is essential for ensuring consistency and ease of use in future analyses. Each file follows a specific structure with clearly defined columns. Below is an overview of the file format, including a table with space for column definitions.
+The standardized format of the files is essential for ensuring consistency and ease of use in future analyses. Each file follows a specific structure with clearly defined columns. Below is an overview of the file format.
 
 Standardized File Structure
 Each file contains the following columns:
@@ -158,7 +158,21 @@ vol_full <- map_dfr(bionessdata, function(efiledat) {
 xlsx::write.xlsx(x = vol_full,
                  file = file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx')
                  )
+
+head(vol_full)
 ```
 
 Volume data is combined with other metadata including event, and sample ID to be
 matched up to taxonomic data.
+
+
+# Quality Control
+
+*List tests and what they check along with results*
+
+# Conclusion
+
+*Status of BIONESS data, what other data exists which was outside of this project scope*
+*Links to github and data*
+
+
