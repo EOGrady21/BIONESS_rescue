@@ -1,0 +1,663 @@
+"","NAME","COLLECTOR_STATION_NAME","INSTITUTE","N_data_rows"
+"1","77007","not assigned","BIO",2258
+"2","78015","not assigned","BIO",1375
+"3","78031","not assigned","BIO",1601
+"4","79006       SHELF79","not assigned","BIO",4146
+"5","80027","not assigned","BIO",4834
+"6","81039","4","BIO",744
+"7","81039","6","BIO",795
+"8","81039","7","BIO",176
+"9","81039","HL3","BIO",182
+"10","81039","not assigned","BIO",1950
+"11","83006","2","BIO",4137
+"12","83023","41","BIO",244
+"13","83023","not assigned","BIO",5038
+"14","84009","BIONESS Station 1","BIO",187
+"15","84009","BIONESS Station 10","BIO",350
+"16","84009","BIONESS Station 11","BIO",521
+"17","84009","BIONESS Station 12","BIO",228
+"18","84009","BIONESS Station 13","BIO",257
+"19","84009","BIONESS Station 14","BIO",307
+"20","84009","BIONESS Station 2","BIO",216
+"21","84009","BIONESS Station 3","BIO",206
+"22","84009","BIONESS Station 5","BIO",266
+"23","84009","BIONESS Station 6","BIO",201
+"24","84009","BIONESS Station 7","BIO",236
+"25","84009","BIONESS Station 8","BIO",405
+"26","84009","BIONESS Station 9","BIO",407
+"27","84037","not assigned","BIO",5764
+"28","85015","not assigned","BIO",5978
+"29","85028","10","BIO",206
+"30","85028","11","BIO",194
+"31","85028","14","BIO",347
+"32","85028","15","BIO",642
+"33","85028","16","BIO",824
+"34","85028","17","BIO",343
+"35","85028","18","BIO",313
+"36","85028","19","BIO",354
+"37","85028","2","BIO",310
+"38","85028","20","BIO",306
+"39","85028","5","BIO",228
+"40","85028","6","BIO",305
+"41","85028","7","BIO",678
+"42","85028","8","BIO",278
+"43","85028","HL2","BIO",296
+"44","85028","HL3","BIO",991
+"45","85028","I","BIO",314
+"46","85028","II","BIO",278
+"47","85028","LINE 1","BIO",209
+"48","85028","LL3","BIO",204
+"49","85028","not assigned","BIO",264
+"50","86030","not assigned","BIO",2866
+"51","87022","1","BIO",215
+"52","87022","289","BIO",346
+"53","87022","298","BIO",496
+"54","87022","308","BIO",527
+"55","87022","326","BIO",341
+"56","87022","333","BIO",394
+"57","87022","336","BIO",516
+"58","87022","350","BIO",145
+"59","87022","352","BIO",209
+"60","87022","HL3","BIO",156
+"61","88019","not assigned","BIO",2913
+"62","88026","not assigned","BIO,BSB",476
+"63","88P364","HL3","BIO",1402
+"64","88P364","LHB","BIO",334
+"65","89003","not assigned","BIO",2036
+"66","89029","20","BIO",38
+"67","89029","not assigned","BIO",3379
+"68","90001","not assigned","BIO",1911
+"69","90005","0","BIO",417
+"70","90026","not assigned","BIO",1593
+"71","91001","2","BSB",180
+"72","91001","not assigned","BSB",1957
+"73","91038","GEORGE'S BASIN","METROLOGY",356
+"74","91038","HL3","METROLOGY",327
+"75","91038","HL3 - S","METROLOGY",27
+"76","91038","JORDAN BASIN","METROLOGY",195
+"77","91038","L-M","METROLOGY",205
+"78","91038","M","METROLOGY",520
+"79","91038","R","METROLOGY",260
+"80","91038","S","METROLOGY",231
+"81","92047","HL3","BIO",198
+"82","92047","not assigned","BIO",113
+"83","95002","CPR","BIO",202
+"84","95002","HL2","BIO",137
+"85","95002","HL3","BIO",226
+"86","95002","HL4","BIO",50
+"87","95002","HL6","BIO",285
+"88","95002","HL7","BIO",319
+"89","95002","LL1","BIO",81
+"90","95002","LL2","BIO",152
+"91","95002","LL6","BIO",42
+"92","95002","LL7","BIO",300
+"93","95002","LL8","BIO",331
+"94","95028","CS5","BIO",228
+"95","95028","HL2","BIO",64
+"96","95028","HL3","BIO",211
+"97","95028","HL4","BIO",105
+"98","95028","HL5","BIO",205
+"99","95028","HL6","BIO",254
+"100","96010","HL2","BIO",71
+"101","96010","HL3","BIO",524
+"102","96010","HL3A","BIO",200
+"103","96010","HL5","BIO",77
+"104","96010","HL6","BIO",245
+"105","96010","HL7","BIO",111
+"106","96010","LC26","BIO",9
+"107","96010","LC28","BIO",9
+"108","96010","LC30","BIO",2
+"109","96010","LL2","BIO",48
+"110","96010","LL5","BIO",231
+"111","96010","LL6","BIO",74
+"112","96010","LL7","BIO",274
+"113","96010","LL8","BIO",253
+"114","96010","SHELF 39","BIO",18
+"115","96028","CS3","BIO",236
+"116","96028","CS5","BIO",237
+"117","96028","CS6","BIO",219
+"118","96028","HL3","BIO",46
+"119","96028","HL6","BIO",165
+"120","97003","GUL3","OSD, BIO",814
+"121","97003","HL3","OSD, BIO",634
+"122","97003","LB1","OSD, BIO",243
+"123","97003","RL1","OSD, BIO",480
+"124","97063","HL2","BIO",79
+"125","97063","HL3","BIO",198
+"126","97063","HL5","BIO",61
+"127","97063","LL1","BIO",62
+"128","97063","LL3","BIO",239
+"129","97063","LL5","BIO",202
+"130","97063","LL7","BIO",252
+"131","98002","CS1","BIO",113
+"132","98002","CS6","BIO",273
+"133","98002","CSL3","BIO",193
+"134","98002","CSL5","BIO",220
+"135","98002","HL3","BIO",365
+"136","98002","HL6","BIO",225
+"137","98002","HL7","BIO",291
+"138","98002","LEB","BIO",175
+"139","98002","LH1","BIO",26
+"140","98002","LL5","BIO",248
+"141","98002","RL1","BIO",186
+"142","98002","gully","BIO",212
+"143","98050","HL3","BIO",197
+"144","98050","LL5","BIO",73
+"145","98050","NL3","BIO",231
+"146","98050","RL1","BIO",142
+"147","99003","HL3","DFO, OSD, BIO",321
+"148","99003","RL1","DFO, OSD, BIO",319
+"149","99054","GULDD1","BIO",232
+"150","99054","GULDD2","BIO",266
+"151","99054","GULDD3","BIO",964
+"152","99054","GULDD4","BIO",666
+"153","99054","GULDD5","BIO",516
+"154","99054","HL3","BIO",242
+"155","99054","norman","BIO",257
+"156","HUD2000050","CSL4","BIO",283
+"157","HUD2000050","GULDD1","BIO",216
+"158","HUD2000050","GULDD3","BIO",345
+"159","HUD2000050","GULDD4","BIO",333
+"160","HUD2000050","HL3","BIO",212
+"161","HUD2000050","LC4","BIO",317
+"162","HUD2000050","RL1","BIO",247
+"163","HUD2000050","not assigned","BIO",239
+"164","HUD2001009","GUL2","BIO",372
+"165","HUD2001009","HL3","BIO",304
+"166","HUD2001009","RL1","BIO",302
+"167","HUD2001061","GULLY","BIO",318
+"168","HUD2001061","HL3","BIO",217
+"169","HUD2001061","RL1","BIO",207
+"170","HUD2002064","HL3","BIO",208
+"171","HUD2002064","RL1","BIO",221
+"172","HUD2003005","HL3","BIO",272
+"173","HUD2004009","GUL3","DFO,OSD,BIO",351
+"174","HUD2004009","HL3","DFO,OSD,BIO",236
+"175","HUD2004009","RL1","DFO,OSD,BIO",320
+"176","HUD2004055","GULLY3","BIO",300
+"177","HUD2004055","RL1","BIO",225
+"178","HUD2005021","JORDAN BASIN 1","BIO",170
+"179","HUD2005021","JORDAN BASIN 2","BIO",153
+"180","HUD2005021","NE CHANNEL 1","BIO",124
+"181","HUD2005021","NE CHANNEL 2","BIO",632
+"182","HUD2005055","GULDD3","BIO",335
+"183","HUD2005055","HL3","BIO",231
+"184","HUD2005055","RL1","BIO",210
+"185","HUD2006008","GEA","BIO",370
+"186","HUD2006008","GULDD3","BIO",406
+"187","HUD2006008","GWA2","BIO",327
+"188","HUD2006008","HL3","BIO",213
+"189","HUD2006008","RL1","BIO",249
+"190","HUD2007001","HL3","BIO",328
+"191","HUD2007001","RL1","BIO",302
+"192","HUD2008037","BCCJ","BIO",133
+"193","HUD2008037","HL3","BIO",223
+"194","HUD2008037","PS4","BIO",120
+"195","HUD2008037","RL1","BIO",278
+"196","IML-1992-03","RIKI-01","IML",151
+"197","IML-1993-16 Mission multidisciplinaire morue","1","IML",251
+"198","IML-1993-16 Mission multidisciplinaire morue","E3A","IML",185
+"199","IML-1993-16 Mission multidisciplinaire morue","E3B","IML",401
+"200","IML-1993-16 Mission multidisciplinaire morue","E3C","IML",205
+"201","IML-1993-16 Mission multidisciplinaire morue","E3D","IML",264
+"202","IML-1993-16 Mission multidisciplinaire morue","FXA","IML",273
+"203","IML-1993-16 Mission multidisciplinaire morue","FXB","IML",281
+"204","IML-1993-16 Mission multidisciplinaire morue","FXC","IML",317
+"205","IML-1993-16 Mission multidisciplinaire morue","FXD","IML",339
+"206","IML-1993-16 Mission multidisciplinaire morue","H4","IML",285
+"207","IML-1994-41 Evaluation abondance zooplancton","K1","IML",199
+"208","IML-1994-41 Evaluation abondance zooplancton","K2","IML",182
+"209","IML-1994-41 Evaluation abondance zooplancton","K3","IML",209
+"210","IML-1994-41 Evaluation abondance zooplancton","K4","IML",269
+"211","IML-1994-41 Evaluation abondance zooplancton","K5","IML",206
+"212","IML-1994-41 Evaluation abondance zooplancton","K6","IML",276
+"213","IML-1994-41 Evaluation abondance zooplancton","M1","IML",181
+"214","IML-1994-41 Evaluation abondance zooplancton","M2","IML",241
+"215","IML-1994-41 Evaluation abondance zooplancton","M3","IML",323
+"216","IML-1994-41 Evaluation abondance zooplancton","M4","IML",235
+"217","IML-1994-41 Evaluation abondance zooplancton","M5","IML",194
+"218","IML-1994-41 Evaluation abondance zooplancton","M6","IML",197
+"219","IML-1994-41 Evaluation abondance zooplancton","O1","IML",218
+"220","IML-1994-41 Evaluation abondance zooplancton","O2","IML",150
+"221","IML-1994-41 Evaluation abondance zooplancton","O3","IML",191
+"222","IML-1994-41 Evaluation abondance zooplancton","O4","IML",106
+"223","IML-1994-41 Evaluation abondance zooplancton","O5","IML",14
+"224","IML-1994-41 Evaluation abondance zooplancton","O6","IML",196
+"225","IML-1994-41 Evaluation abondance zooplancton","R2","IML",249
+"226","IML-1994-41 Evaluation abondance zooplancton","R3","IML",267
+"227","IML-1994-41 Evaluation abondance zooplancton","R4","IML",255
+"228","IML-1994-41 Evaluation abondance zooplancton","R6A","IML",255
+"229","IML-1994-41 Evaluation abondance zooplancton","R6B","IML",230
+"230","IML-1994-41 Evaluation abondance zooplancton","RD3","IML",302
+"231","IML-1994-41 Evaluation abondance zooplancton","RD4","IML",304
+"232","IML-1994-41 Evaluation abondance zooplancton","RN2","IML",271
+"233","IML-1994-41 Evaluation abondance zooplancton","RN3","IML",241
+"234","IML-1994-41 Evaluation abondance zooplancton","T1","IML",261
+"235","IML-1994-41 Evaluation abondance zooplancton","T2","IML",174
+"236","IML-1994-41 Evaluation abondance zooplancton","T3","IML",182
+"237","IML-1994-41 Evaluation abondance zooplancton","T4","IML",214
+"238","IML-1994-41 Evaluation abondance zooplancton","T6","IML",232
+"239","IML-1994-41 Evaluation abondance zooplancton","TD4","IML",251
+"240","IML-1995-44 Evaluation biomasse zooplancton","G1","IML",37
+"241","IML-1995-44 Evaluation biomasse zooplancton","G2","IML",31
+"242","IML-1995-44 Evaluation biomasse zooplancton","G3","IML",92
+"243","IML-1995-44 Evaluation biomasse zooplancton","G4","IML",16
+"244","IML-1995-44 Evaluation biomasse zooplancton","I1","IML",15
+"245","IML-1995-44 Evaluation biomasse zooplancton","I2","IML",30
+"246","IML-1995-44 Evaluation biomasse zooplancton","I3","IML",88
+"247","IML-1995-44 Evaluation biomasse zooplancton","I4","IML",30
+"248","IML-1995-44 Evaluation biomasse zooplancton","K1","IML",15
+"249","IML-1995-44 Evaluation biomasse zooplancton","K2","IML",15
+"250","IML-1995-44 Evaluation biomasse zooplancton","K3","IML",31
+"251","IML-1995-44 Evaluation biomasse zooplancton","K4","IML",48
+"252","IML-1995-44 Evaluation biomasse zooplancton","K5","IML",32
+"253","IML-1995-44 Evaluation biomasse zooplancton","K6","IML",28
+"254","IML-1995-44 Evaluation biomasse zooplancton","M1","IML",15
+"255","IML-1995-44 Evaluation biomasse zooplancton","M2","IML",30
+"256","IML-1995-44 Evaluation biomasse zooplancton","M3","IML",32
+"257","IML-1995-44 Evaluation biomasse zooplancton","M4","IML",102
+"258","IML-1995-44 Evaluation biomasse zooplancton","M5","IML",36
+"259","IML-1995-44 Evaluation biomasse zooplancton","M6","IML",18
+"260","IML-1995-44 Evaluation biomasse zooplancton","O2","IML",36
+"261","IML-1995-44 Evaluation biomasse zooplancton","O3","IML",35
+"262","IML-1995-44 Evaluation biomasse zooplancton","O4","IML",84
+"263","IML-1995-44 Evaluation biomasse zooplancton","O5","IML",36
+"264","IML-1995-44 Evaluation biomasse zooplancton","O6","IML",18
+"265","IML-1995-44 Evaluation biomasse zooplancton","R4","IML",98
+"266","IML-1995-44 Evaluation biomasse zooplancton","R5","IML",36
+"267","IML-1995-44 Evaluation biomasse zooplancton","R6","IML",18
+"268","IML-1996-49 Evaluation biomasse zooplancton","G1","IML",64
+"269","IML-1996-49 Evaluation biomasse zooplancton","G2","IML",59
+"270","IML-1996-49 Evaluation biomasse zooplancton","G3","IML",136
+"271","IML-1996-49 Evaluation biomasse zooplancton","G4","IML",32
+"272","IML-1996-49 Evaluation biomasse zooplancton","GV2","IML",257
+"273","IML-1996-49 Evaluation biomasse zooplancton","GV3","IML",213
+"274","IML-1996-49 Evaluation biomasse zooplancton","GY2","IML",208
+"275","IML-1996-49 Evaluation biomasse zooplancton","GZ2","IML",255
+"276","IML-1996-49 Evaluation biomasse zooplancton","I2","IML",64
+"277","IML-1996-49 Evaluation biomasse zooplancton","I3","IML",150
+"278","IML-1996-49 Evaluation biomasse zooplancton","I4","IML",54
+"279","IML-1996-49 Evaluation biomasse zooplancton","K2","IML",32
+"280","IML-1996-49 Evaluation biomasse zooplancton","K3","IML",109
+"281","IML-1996-49 Evaluation biomasse zooplancton","K4","IML",161
+"282","IML-1996-49 Evaluation biomasse zooplancton","K5","IML",64
+"283","IML-1996-49 Evaluation biomasse zooplancton","K6","IML",32
+"284","IML-1996-49 Evaluation biomasse zooplancton","M1","IML",32
+"285","IML-1996-49 Evaluation biomasse zooplancton","M2","IML",64
+"286","IML-1996-49 Evaluation biomasse zooplancton","M3","IML",64
+"287","IML-1996-49 Evaluation biomasse zooplancton","M4","IML",154
+"288","IML-1996-49 Evaluation biomasse zooplancton","M5","IML",64
+"289","IML-1996-49 Evaluation biomasse zooplancton","M6","IML",32
+"290","IML-1996-49 Evaluation biomasse zooplancton","O2","IML",32
+"291","IML-1996-49 Evaluation biomasse zooplancton","O3","IML",64
+"292","IML-1996-49 Evaluation biomasse zooplancton","O4","IML",114
+"293","IML-1996-49 Evaluation biomasse zooplancton","O5","IML",137
+"294","IML-1996-49 Evaluation biomasse zooplancton","O6","IML",32
+"295","IML-1996-49 Evaluation biomasse zooplancton","R1","IML",64
+"296","IML-1996-49 Evaluation biomasse zooplancton","R2","IML",61
+"297","IML-1996-49 Evaluation biomasse zooplancton","R3","IML",64
+"298","IML-1996-49 Evaluation biomasse zooplancton","R4","IML",160
+"299","IML-1996-49 Evaluation biomasse zooplancton","R5","IML",170
+"300","IML-1996-49 Evaluation biomasse zooplancton","R6","IML",28
+"301","IML-1996-49 Evaluation biomasse zooplancton","T1","IML",28
+"302","IML-1996-49 Evaluation biomasse zooplancton","T2","IML",27
+"303","IML-1996-49 Evaluation biomasse zooplancton","T3","IML",63
+"304","IML-1996-49 Evaluation biomasse zooplancton","T4","IML",162
+"305","IML-1996-49 Evaluation biomasse zooplancton","T5","IML",81
+"306","IML-1996-49 Evaluation biomasse zooplancton","T6","IML",63
+"307","IML-1996-49 Evaluation biomasse zooplancton","TV5","IML",225
+"308","IML-1996-49 Evaluation biomasse zooplancton","TW5","IML",231
+"309","IML-1996-49 Evaluation biomasse zooplancton","TY5","IML",280
+"310","IML-1996-49 Evaluation biomasse zooplancton","TZ5","IML",321
+"311","IML-1997-40 Evaluation biomasse zooplancton","G1","IML",32
+"312","IML-1997-40 Evaluation biomasse zooplancton","G1B","IML",32
+"313","IML-1997-40 Evaluation biomasse zooplancton","G2","IML",60
+"314","IML-1997-40 Evaluation biomasse zooplancton","G3","IML",64
+"315","IML-1997-40 Evaluation biomasse zooplancton","G4","IML",30
+"316","IML-1997-40 Evaluation biomasse zooplancton","I2","IML",60
+"317","IML-1997-40 Evaluation biomasse zooplancton","I3","IML",64
+"318","IML-1997-40 Evaluation biomasse zooplancton","I4","IML",60
+"319","IML-1997-40 Evaluation biomasse zooplancton","K2","IML",30
+"320","IML-1997-40 Evaluation biomasse zooplancton","K3","IML",46
+"321","IML-1997-40 Evaluation biomasse zooplancton","K4","IML",64
+"322","IML-1997-40 Evaluation biomasse zooplancton","K5","IML",46
+"323","IML-1997-40 Evaluation biomasse zooplancton","M1","IML",16
+"324","IML-1997-40 Evaluation biomasse zooplancton","M2","IML",60
+"325","IML-1997-40 Evaluation biomasse zooplancton","M3","IML",46
+"326","IML-1997-40 Evaluation biomasse zooplancton","M4","IML",64
+"327","IML-1997-40 Evaluation biomasse zooplancton","M5","IML",60
+"328","IML-1997-40 Evaluation biomasse zooplancton","M6","IML",29
+"329","IML-1997-40 Evaluation biomasse zooplancton","O1","IML",16
+"330","IML-1997-40 Evaluation biomasse zooplancton","O2","IML",30
+"331","IML-1997-40 Evaluation biomasse zooplancton","O3","IML",60
+"332","IML-1997-40 Evaluation biomasse zooplancton","O4","IML",64
+"333","IML-1997-40 Evaluation biomasse zooplancton","O5","IML",59
+"334","IML-1997-40 Evaluation biomasse zooplancton","O6","IML",30
+"335","IML-1997-40 Evaluation biomasse zooplancton","R1","IML",59
+"336","IML-1997-40 Evaluation biomasse zooplancton","R2","IML",60
+"337","IML-1997-40 Evaluation biomasse zooplancton","R3","IML",50
+"338","IML-1997-40 Evaluation biomasse zooplancton","R4","IML",45
+"339","IML-1997-40 Evaluation biomasse zooplancton","R5","IML",60
+"340","IML-1997-40 Evaluation biomasse zooplancton","R6","IML",30
+"341","IML-1997-40 Evaluation biomasse zooplancton","T2","IML",30
+"342","IML-1997-40 Evaluation biomasse zooplancton","T4","IML",64
+"343","IML-1997-40 Evaluation biomasse zooplancton","T5","IML",60
+"344","IML-1997-40 Evaluation biomasse zooplancton","T6","IML",32
+"345","IML-1997-40 Evaluation biomasse zooplancton","U2","IML",40
+"346","IML-1997-40 Evaluation biomasse zooplancton","U4","IML",60
+"347","IML-1997-40 Evaluation biomasse zooplancton","U5","IML",60
+"348","IML-1997-40 Evaluation biomasse zooplancton","U6","IML",30
+"349","IML-1998-46 Evaluation biomasse zooplancton","G2","IML",141
+"350","IML-1998-46 Evaluation biomasse zooplancton","G3","IML",149
+"351","IML-1998-46 Evaluation biomasse zooplancton","G4","IML",78
+"352","IML-1998-46 Evaluation biomasse zooplancton","I2","IML",138
+"353","IML-1998-46 Evaluation biomasse zooplancton","I3","IML",143
+"354","IML-1998-46 Evaluation biomasse zooplancton","I4","IML",135
+"355","IML-1998-46 Evaluation biomasse zooplancton","K1","IML",66
+"356","IML-1998-46 Evaluation biomasse zooplancton","K2","IML",65
+"357","IML-1998-46 Evaluation biomasse zooplancton","K3","IML",134
+"358","IML-1998-46 Evaluation biomasse zooplancton","K4","IML",139
+"359","IML-1998-46 Evaluation biomasse zooplancton","K5","IML",143
+"360","IML-1998-46 Evaluation biomasse zooplancton","K6","IML",82
+"361","IML-1998-46 Evaluation biomasse zooplancton","KDV5","IML",354
+"362","IML-1998-46 Evaluation biomasse zooplancton","M1","IML",70
+"363","IML-1998-46 Evaluation biomasse zooplancton","M2","IML",136
+"364","IML-1998-46 Evaluation biomasse zooplancton","M3","IML",156
+"365","IML-1998-46 Evaluation biomasse zooplancton","M4","IML",144
+"366","IML-1998-46 Evaluation biomasse zooplancton","M5","IML",143
+"367","IML-1998-46 Evaluation biomasse zooplancton","M6","IML",66
+"368","IML-1998-46 Evaluation biomasse zooplancton","O1","IML",70
+"369","IML-1998-46 Evaluation biomasse zooplancton","O2","IML",78
+"370","IML-1998-46 Evaluation biomasse zooplancton","O3","IML",152
+"371","IML-1998-46 Evaluation biomasse zooplancton","O4","IML",112
+"372","IML-1998-46 Evaluation biomasse zooplancton","O5","IML",142
+"373","IML-1998-46 Evaluation biomasse zooplancton","O6","IML",78
+"374","IML-1998-46 Evaluation biomasse zooplancton","R1","IML",157
+"375","IML-1998-46 Evaluation biomasse zooplancton","R2","IML",152
+"376","IML-1998-46 Evaluation biomasse zooplancton","R3","IML",138
+"377","IML-1998-46 Evaluation biomasse zooplancton","R4","IML",145
+"378","IML-1998-46 Evaluation biomasse zooplancton","R5","IML",114
+"379","IML-1998-46 Evaluation biomasse zooplancton","R6","IML",75
+"380","IML-1998-46 Evaluation biomasse zooplancton","T1","IML",80
+"381","IML-1998-46 Evaluation biomasse zooplancton","T2","IML",66
+"382","IML-1998-46 Evaluation biomasse zooplancton","T3","IML",143
+"383","IML-1998-46 Evaluation biomasse zooplancton","T4","IML",133
+"384","IML-1998-46 Evaluation biomasse zooplancton","T5","IML",138
+"385","IML-1998-46 Evaluation biomasse zooplancton","T6","IML",150
+"386","IML-1998-46 Evaluation biomasse zooplancton","U1","IML",138
+"387","IML-1998-46 Evaluation biomasse zooplancton","U2","IML",145
+"388","IML-1998-46 Evaluation biomasse zooplancton","U3","IML",227
+"389","IML-1998-46 Evaluation biomasse zooplancton","U4","IML",134
+"390","IML-1998-46 Evaluation biomasse zooplancton","U5","IML",102
+"391","IML-1998-46 Evaluation biomasse zooplancton","U6","IML",76
+"392","IML-1998-46 Evaluation biomasse zooplancton","UDV2","IML",334
+"393","IML-1998-46 Evaluation biomasse zooplancton","UDV6","IML",222
+"394","IML-1998-46 Evaluation biomasse zooplancton","UDW2","IML",309
+"395","IML-1998-46 Evaluation biomasse zooplancton","UNV2A","IML",324
+"396","IML-1998-46 Evaluation biomasse zooplancton","UNV2B","IML",345
+"397","IML-1998-46 Evaluation biomasse zooplancton","UNV6","IML",261
+"398","IML-1998-46 Evaluation biomasse zooplancton","UNW6","IML",248
+"399","IML-1999-42 Evaluation biomasse zooplancton","G1","IML",81
+"400","IML-1999-42 Evaluation biomasse zooplancton","G2","IML",80
+"401","IML-1999-42 Evaluation biomasse zooplancton","G3","IML",41
+"402","IML-1999-42 Evaluation biomasse zooplancton","G4","IML",40
+"403","IML-1999-42 Evaluation biomasse zooplancton","I1","IML",34
+"404","IML-1999-42 Evaluation biomasse zooplancton","I2","IML",78
+"405","IML-1999-42 Evaluation biomasse zooplancton","I3","IML",79
+"406","IML-1999-42 Evaluation biomasse zooplancton","I4","IML",40
+"407","IML-1999-42 Evaluation biomasse zooplancton","K1","IML",40
+"408","IML-1999-42 Evaluation biomasse zooplancton","K2","IML",38
+"409","IML-1999-42 Evaluation biomasse zooplancton","K3","IML",76
+"410","IML-1999-42 Evaluation biomasse zooplancton","K4","IML",80
+"411","IML-1999-42 Evaluation biomasse zooplancton","K5","IML",80
+"412","IML-1999-42 Evaluation biomasse zooplancton","K6","IML",38
+"413","IML-1999-42 Evaluation biomasse zooplancton","M1","IML",40
+"414","IML-1999-42 Evaluation biomasse zooplancton","M2","IML",62
+"415","IML-1999-42 Evaluation biomasse zooplancton","M3","IML",62
+"416","IML-1999-42 Evaluation biomasse zooplancton","M4","IML",79
+"417","IML-1999-42 Evaluation biomasse zooplancton","M5","IML",79
+"418","IML-1999-42 Evaluation biomasse zooplancton","M6","IML",39
+"419","IML-1999-42 Evaluation biomasse zooplancton","O2","IML",38
+"420","IML-1999-42 Evaluation biomasse zooplancton","O3","IML",36
+"421","IML-1999-42 Evaluation biomasse zooplancton","O4","IML",82
+"422","IML-1999-42 Evaluation biomasse zooplancton","O5","IML",82
+"423","IML-1999-42 Evaluation biomasse zooplancton","O6","IML",40
+"424","IML-1999-42 Evaluation biomasse zooplancton","R2","IML",57
+"425","IML-1999-42 Evaluation biomasse zooplancton","R3","IML",71
+"426","IML-1999-42 Evaluation biomasse zooplancton","R4","IML",56
+"427","IML-1999-43 Evaluation biomasse zooplancton","O1","IML",39
+"428","IML-1999-43 Evaluation biomasse zooplancton","O2","IML",15
+"429","IML-1999-43 Evaluation biomasse zooplancton","O3","IML",47
+"430","IML-1999-43 Evaluation biomasse zooplancton","O4","IML",59
+"431","IML-1999-43 Evaluation biomasse zooplancton","O5","IML",47
+"432","IML-1999-43 Evaluation biomasse zooplancton","O6","IML",14
+"433","IML-1999-43 Evaluation biomasse zooplancton","R1","IML",38
+"434","IML-1999-43 Evaluation biomasse zooplancton","R2","IML",29
+"435","IML-1999-43 Evaluation biomasse zooplancton","R3","IML",61
+"436","IML-1999-43 Evaluation biomasse zooplancton","R4","IML",81
+"437","IML-1999-43 Evaluation biomasse zooplancton","R5","IML",79
+"438","IML-1999-43 Evaluation biomasse zooplancton","T1","IML",40
+"439","IML-1999-43 Evaluation biomasse zooplancton","T2","IML",40
+"440","IML-1999-43 Evaluation biomasse zooplancton","T3","IML",77
+"441","IML-1999-43 Evaluation biomasse zooplancton","T4","IML",82
+"442","IML-1999-43 Evaluation biomasse zooplancton","T5","IML",40
+"443","IML-1999-43 Evaluation biomasse zooplancton","T6","IML",80
+"444","IML-1999-43 Evaluation biomasse zooplancton","U1","IML",75
+"445","IML-1999-43 Evaluation biomasse zooplancton","U2","IML",58
+"446","IML-1999-43 Evaluation biomasse zooplancton","U3","IML",74
+"447","IML-1999-43 Evaluation biomasse zooplancton","U4","IML",84
+"448","IML-1999-43 Evaluation biomasse zooplancton","U5","IML",83
+"449","IML-1999-43 Evaluation biomasse zooplancton","U6","IML",43
+"450","IML-1999-43 Evaluation biomasse zooplancton","X1","IML",59
+"451","IML-1999-43 Evaluation biomasse zooplancton","X2","IML",31
+"452","IML-1999-43 Evaluation biomasse zooplancton","X3","IML",31
+"453","IML-1999-43 Evaluation biomasse zooplancton","X4","IML",63
+"454","IML-1999-43 Evaluation biomasse zooplancton","X5","IML",62
+"455","IML-1999-43 Evaluation biomasse zooplancton","X6","IML",33
+"456","IML-1999-43 Evaluation biomasse zooplancton","Y1","IML",30
+"457","IML-1999-43 Evaluation biomasse zooplancton","Y2","IML",59
+"458","IML-1999-43 Evaluation biomasse zooplancton","Y3","IML",63
+"459","IML-1999-43 Evaluation biomasse zooplancton","Y4","IML",33
+"460","IML-2000-52 Evaluation biomasse zooplancton","G1","IML",74
+"461","IML-2000-52 Evaluation biomasse zooplancton","G2","IML",38
+"462","IML-2000-52 Evaluation biomasse zooplancton","G3","IML",38
+"463","IML-2000-52 Evaluation biomasse zooplancton","G4","IML",38
+"464","IML-2000-52 Evaluation biomasse zooplancton","I1","IML",38
+"465","IML-2000-52 Evaluation biomasse zooplancton","I2","IML",74
+"466","IML-2000-52 Evaluation biomasse zooplancton","I3","IML",74
+"467","IML-2000-52 Evaluation biomasse zooplancton","I4","IML",74
+"468","IML-2000-52 Evaluation biomasse zooplancton","K1","IML",19
+"469","IML-2000-52 Evaluation biomasse zooplancton","K2","IML",38
+"470","IML-2000-52 Evaluation biomasse zooplancton","K3","IML",74
+"471","IML-2000-52 Evaluation biomasse zooplancton","K4","IML",74
+"472","IML-2000-52 Evaluation biomasse zooplancton","K5","IML",74
+"473","IML-2000-52 Evaluation biomasse zooplancton","K6","IML",38
+"474","IML-2000-52 Evaluation biomasse zooplancton","M2","IML",70
+"475","IML-2000-52 Evaluation biomasse zooplancton","M3","IML",74
+"476","IML-2000-52 Evaluation biomasse zooplancton","M4","IML",74
+"477","IML-2000-52 Evaluation biomasse zooplancton","M5","IML",74
+"478","IML-2000-52 Evaluation biomasse zooplancton","M6","IML",38
+"479","IML-2000-52 Evaluation biomasse zooplancton","O2","IML",38
+"480","IML-2000-52 Evaluation biomasse zooplancton","O3","IML",74
+"481","IML-2000-52 Evaluation biomasse zooplancton","O4","IML",74
+"482","IML-2000-52 Evaluation biomasse zooplancton","O5","IML",74
+"483","IML-2000-52 Evaluation biomasse zooplancton","O6","IML",19
+"484","IML-2000-52 Evaluation biomasse zooplancton","R1","IML",74
+"485","IML-2000-52 Evaluation biomasse zooplancton","R2","IML",68
+"486","IML-2000-52 Evaluation biomasse zooplancton","R3","IML",38
+"487","IML-2000-52 Evaluation biomasse zooplancton","R5","IML",74
+"488","IML-2000-52 Evaluation biomasse zooplancton","R6","IML",38
+"489","IML-2000-52 Evaluation biomasse zooplancton","T1","IML",38
+"490","IML-2000-52 Evaluation biomasse zooplancton","T2","IML",38
+"491","IML-2000-52 Evaluation biomasse zooplancton","T3","IML",74
+"492","IML-2000-52 Evaluation biomasse zooplancton","T4","IML",74
+"493","IML-2000-52 Evaluation biomasse zooplancton","T5","IML",74
+"494","IML-2000-52 Evaluation biomasse zooplancton","T6","IML",38
+"495","IML-2000-52 Evaluation biomasse zooplancton","U1","IML",74
+"496","IML-2000-52 Evaluation biomasse zooplancton","U2","IML",38
+"497","IML-2000-52 Evaluation biomasse zooplancton","U3","IML",38
+"498","IML-2000-52 Evaluation biomasse zooplancton","U4","IML",38
+"499","IML-2000-52 Evaluation biomasse zooplancton","U5","IML",74
+"500","IML-2000-52 Evaluation biomasse zooplancton","U6","IML",19
+"501","IML-2001-61 Evaluation biomasse zooplancton","G1","IML",76
+"502","IML-2001-61 Evaluation biomasse zooplancton","G2","IML",119
+"503","IML-2001-61 Evaluation biomasse zooplancton","G3","IML",38
+"504","IML-2001-61 Evaluation biomasse zooplancton","G4","IML",57
+"505","IML-2001-61 Evaluation biomasse zooplancton","I1","IML",57
+"506","IML-2001-61 Evaluation biomasse zooplancton","I2","IML",80
+"507","IML-2001-61 Evaluation biomasse zooplancton","I3","IML",119
+"508","IML-2001-61 Evaluation biomasse zooplancton","I4","IML",114
+"509","IML-2001-61 Evaluation biomasse zooplancton","K1","IML",57
+"510","IML-2001-61 Evaluation biomasse zooplancton","K2","IML",38
+"511","IML-2001-61 Evaluation biomasse zooplancton","K3","IML",82
+"512","IML-2001-61 Evaluation biomasse zooplancton","K4","IML",60
+"513","IML-2001-61 Evaluation biomasse zooplancton","K5","IML",118
+"514","IML-2001-61 Evaluation biomasse zooplancton","K6","IML",38
+"515","IML-2001-61 Evaluation biomasse zooplancton","M2","IML",77
+"516","IML-2001-61 Evaluation biomasse zooplancton","M3","IML",81
+"517","IML-2001-61 Evaluation biomasse zooplancton","M4","IML",117
+"518","IML-2001-61 Evaluation biomasse zooplancton","M5","IML",76
+"519","IML-2001-61 Evaluation biomasse zooplancton","M6","IML",57
+"520","IML-2001-61 Evaluation biomasse zooplancton","O1","IML",38
+"521","IML-2001-61 Evaluation biomasse zooplancton","O2","IML",38
+"522","IML-2001-61 Evaluation biomasse zooplancton","O3","IML",119
+"523","IML-2001-61 Evaluation biomasse zooplancton","O4","IML",77
+"524","IML-2001-61 Evaluation biomasse zooplancton","O5","IML",115
+"525","IML-2001-61 Evaluation biomasse zooplancton","O6","IML",60
+"526","IML-2001-61 Evaluation biomasse zooplancton","R1","IML",118
+"527","IML-2001-61 Evaluation biomasse zooplancton","R2","IML",80
+"528","IML-2001-61 Evaluation biomasse zooplancton","R3","IML",80
+"529","IML-2001-61 Evaluation biomasse zooplancton","R4","IML",81
+"530","IML-2001-61 Evaluation biomasse zooplancton","R5","IML",119
+"531","IML-2001-61 Evaluation biomasse zooplancton","R6","IML",57
+"532","IML-2001-61 Evaluation biomasse zooplancton","T2","IML",57
+"533","IML-2001-61 Evaluation biomasse zooplancton","T3","IML",81
+"534","IML-2001-61 Evaluation biomasse zooplancton","T4","IML",81
+"535","IML-2001-61 Evaluation biomasse zooplancton","T5","IML",118
+"536","IML-2001-61 Evaluation biomasse zooplancton","T6","IML",78
+"537","IML-2001-61 Evaluation biomasse zooplancton","U1","IML",77
+"538","IML-2001-61 Evaluation biomasse zooplancton","U2","IML",120
+"539","IML-2001-61 Evaluation biomasse zooplancton","U3","IML",116
+"540","IML-2001-61 Evaluation biomasse zooplancton","U4","IML",81
+"541","IML-2001-61 Evaluation biomasse zooplancton","U5","IML",77
+"542","IML-2001-61 Evaluation biomasse zooplancton","U6","IML",40
+"543","IML-2002-68 Evaluation biomasse zooplancton","G1","IML",94
+"544","IML-2002-68 Evaluation biomasse zooplancton","G2","IML",93
+"545","IML-2002-68 Evaluation biomasse zooplancton","G3","IML",46
+"546","IML-2002-68 Evaluation biomasse zooplancton","G4","IML",46
+"547","IML-2002-68 Evaluation biomasse zooplancton","I1","IML",46
+"548","IML-2002-68 Evaluation biomasse zooplancton","I2","IML",93
+"549","IML-2002-68 Evaluation biomasse zooplancton","I3","IML",94
+"550","IML-2002-68 Evaluation biomasse zooplancton","I4","IML",93
+"551","IML-2002-68 Evaluation biomasse zooplancton","K1","IML",46
+"552","IML-2002-68 Evaluation biomasse zooplancton","K2","IML",46
+"553","IML-2002-68 Evaluation biomasse zooplancton","K3","IML",94
+"554","IML-2002-68 Evaluation biomasse zooplancton","K4","IML",94
+"555","IML-2002-68 Evaluation biomasse zooplancton","K5","IML",93
+"556","IML-2002-68 Evaluation biomasse zooplancton","K6","IML",46
+"557","IML-2002-68 Evaluation biomasse zooplancton","M1","IML",46
+"558","IML-2002-68 Evaluation biomasse zooplancton","M2","IML",94
+"559","IML-2002-68 Evaluation biomasse zooplancton","M3","IML",96
+"560","IML-2002-68 Evaluation biomasse zooplancton","M4","IML",95
+"561","IML-2002-68 Evaluation biomasse zooplancton","M5","IML",95
+"562","IML-2002-68 Evaluation biomasse zooplancton","M6","IML",46
+"563","IML-2002-68 Evaluation biomasse zooplancton","O1","IML",46
+"564","IML-2002-68 Evaluation biomasse zooplancton","O2","IML",44
+"565","IML-2002-68 Evaluation biomasse zooplancton","O3","IML",90
+"566","IML-2002-68 Evaluation biomasse zooplancton","O4","IML",76
+"567","IML-2002-68 Evaluation biomasse zooplancton","O5","IML",95
+"568","IML-2002-68 Evaluation biomasse zooplancton","O6","IML",25
+"569","IML-2002-68 Evaluation biomasse zooplancton","R1","IML",94
+"570","IML-2002-68 Evaluation biomasse zooplancton","R2","IML",94
+"571","IML-2002-68 Evaluation biomasse zooplancton","R3","IML",94
+"572","IML-2002-68 Evaluation biomasse zooplancton","R4","IML",94
+"573","IML-2002-68 Evaluation biomasse zooplancton","R5","IML",96
+"574","IML-2002-68 Evaluation biomasse zooplancton","R6","IML",50
+"575","IML-2002-68 Evaluation biomasse zooplancton","T1","IML",92
+"576","IML-2002-68 Evaluation biomasse zooplancton","T2","IML",50
+"577","IML-2002-68 Evaluation biomasse zooplancton","T3","IML",92
+"578","IML-2002-68 Evaluation biomasse zooplancton","T4","IML",94
+"579","IML-2002-68 Evaluation biomasse zooplancton","T5","IML",94
+"580","IML-2002-68 Evaluation biomasse zooplancton","T6","IML",95
+"581","IML-2002-68 Evaluation biomasse zooplancton","U1","IML",92
+"582","IML-2002-68 Evaluation biomasse zooplancton","U2","IML",91
+"583","IML-2002-68 Evaluation biomasse zooplancton","U3","IML",92
+"584","IML-2002-68 Evaluation biomasse zooplancton","U4","IML",92
+"585","IML-2002-68 Evaluation biomasse zooplancton","U5","IML",91
+"586","IML-2002-68 Evaluation biomasse zooplancton","U6","IML",46
+"587","IML-2003-54 Evaluation biomasse zooplancton","G1","IML",106
+"588","IML-2003-54 Evaluation biomasse zooplancton","G2","IML",114
+"589","IML-2003-54 Evaluation biomasse zooplancton","G3","IML",104
+"590","IML-2003-54 Evaluation biomasse zooplancton","G4","IML",56
+"591","IML-2003-54 Evaluation biomasse zooplancton","H1","IML",104
+"592","IML-2003-54 Evaluation biomasse zooplancton","H4","IML",112
+"593","IML-2003-54 Evaluation biomasse zooplancton","I1","IML",56
+"594","IML-2003-54 Evaluation biomasse zooplancton","I2","IML",106
+"595","IML-2003-54 Evaluation biomasse zooplancton","I3","IML",113
+"596","IML-2003-54 Evaluation biomasse zooplancton","I4","IML",104
+"597","IML-2003-54 Evaluation biomasse zooplancton","J1","IML",56
+"598","IML-2003-54 Evaluation biomasse zooplancton","J3","IML",106
+"599","IML-2003-54 Evaluation biomasse zooplancton","J6","IML",55
+"600","IML-2003-54 Evaluation biomasse zooplancton","K1","IML",56
+"601","IML-2003-54 Evaluation biomasse zooplancton","K2","IML",56
+"602","IML-2003-54 Evaluation biomasse zooplancton","K3","IML",106
+"603","IML-2003-54 Evaluation biomasse zooplancton","K4","IML",114
+"604","IML-2003-54 Evaluation biomasse zooplancton","K5","IML",106
+"605","IML-2003-54 Evaluation biomasse zooplancton","K6","IML",52
+"606","IML-2003-54 Evaluation biomasse zooplancton","L1","IML",52
+"607","IML-2003-54 Evaluation biomasse zooplancton","L3","IML",106
+"608","IML-2003-54 Evaluation biomasse zooplancton","L6","IML",52
+"609","IML-2003-54 Evaluation biomasse zooplancton","M1","IML",52
+"610","IML-2003-54 Evaluation biomasse zooplancton","M2","IML",106
+"611","IML-2003-54 Evaluation biomasse zooplancton","M3","IML",113
+"612","IML-2003-54 Evaluation biomasse zooplancton","M4","IML",105
+"613","IML-2003-54 Evaluation biomasse zooplancton","M5","IML",106
+"614","IML-2003-54 Evaluation biomasse zooplancton","M6","IML",56
+"615","IML-2003-54 Evaluation biomasse zooplancton","N1","IML",53
+"616","IML-2003-54 Evaluation biomasse zooplancton","N3","IML",112
+"617","IML-2003-54 Evaluation biomasse zooplancton","N6","IML",52
+"618","IML-2003-54 Evaluation biomasse zooplancton","O1","IML",52
+"619","IML-2003-54 Evaluation biomasse zooplancton","O2","IML",56
+"620","IML-2003-54 Evaluation biomasse zooplancton","O3","IML",104
+"621","IML-2003-54 Evaluation biomasse zooplancton","O4","IML",113
+"622","IML-2003-54 Evaluation biomasse zooplancton","O5","IML",106
+"623","IML-2003-54 Evaluation biomasse zooplancton","O6","IML",52
+"624","IML-2003-54 Evaluation biomasse zooplancton","P1","IML",56
+"625","IML-2003-54 Evaluation biomasse zooplancton","P3","IML",106
+"626","IML-2003-54 Evaluation biomasse zooplancton","P6","IML",52
+"627","IML-2003-54 Evaluation biomasse zooplancton","R1","IML",106
+"628","IML-2003-54 Evaluation biomasse zooplancton","R2","IML",106
+"629","IML-2003-54 Evaluation biomasse zooplancton","R3","IML",106
+"630","IML-2003-54 Evaluation biomasse zooplancton","R4","IML",107
+"631","IML-2003-54 Evaluation biomasse zooplancton","R5","IML",114
+"632","IML-2003-54 Evaluation biomasse zooplancton","R6","IML",52
+"633","IML-2003-54 Evaluation biomasse zooplancton","T1","IML",52
+"634","IML-2003-54 Evaluation biomasse zooplancton","T2","IML",56
+"635","IML-2003-54 Evaluation biomasse zooplancton","T3","IML",81
+"636","IML-2003-54 Evaluation biomasse zooplancton","T4","IML",105
+"637","IML-2003-54 Evaluation biomasse zooplancton","T5","IML",105
+"638","IML-2003-54 Evaluation biomasse zooplancton","T6","IML",104
+"639","IML-2003-54 Evaluation biomasse zooplancton","U1","IML",104
+"640","IML-2003-54 Evaluation biomasse zooplancton","U2","IML",106
+"641","IML-2003-54 Evaluation biomasse zooplancton","U3","IML",106
+"642","IML-2003-54 Evaluation biomasse zooplancton","U4","IML",106
+"643","IML-2003-54 Evaluation biomasse zooplancton","U5","IML",112
+"644","IML-2003-54 Evaluation biomasse zooplancton","U6","IML",52
+"645","IML-2003-54 Evaluation biomasse zooplancton","UT3","IML",112
+"646","IOS2006025","CS03","IOS",2
+"647","IOS2006025","CS09","IOS",3
+"648","IOS2006025","CS10","IOS",4
+"649","IOS2006025","QCS03","IOS",5
+"650","IOS2006025","QCS14","IOS",3
+"651","IOS2006025","QCS18","IOS",3
+"652","IOS2006025","QCS26","IOS",3
+"653","IOS2006025","QCS35","IOS",1
+"654","IOS2006025","SS2","IOS",5
+"655","IOS2006025","SS5","IOS",2
+"656","PAR2000002","CSL3","BIO",318
+"657","PAR2000002","GULDD1","BIO",241
+"658","PAR2000002","GULDD2","BIO",310
+"659","PAR2000002","GULDD3","BIO",311
+"660","PAR2000002","GULDD4","BIO",371
+"661","PAR2000002","HL3","BIO",323
+"662","PAR2000002","RL1","BIO",243
