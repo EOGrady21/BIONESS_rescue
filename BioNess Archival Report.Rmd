@@ -17,6 +17,8 @@ A discussion with Rebecca Milne prompted the organization of data accounting by 
 
 * How many missions and stations were archived as part of this project* 
 
+This project prepared and archived 55 stations across 13 missions from 2009-2016.
+
 * Table of data included *
 
 
@@ -31,15 +33,34 @@ The first step involved consolidating raw data from various sources into a singl
 
 ### Identifying Metadata Gaps
 
-During the initial assessment, we identified several gaps and inconsistencies in the metadata. Common issues included missing sample IDs, sounding data, and discrepancies in date formats. Sounding data, typically recorded on BIONESS log sheets, was often missing and needed to be entered manually. Sample IDs were inconsistently recorded,and stickers were not used on some missions, required compound unique sample IDs to be generated. In those cases (*list missions*), the formaula used to create compound sample IDs followed Mary Kennedy's procdures: *compound sample ID formula*
+During the initial assessment, we identified several gaps and inconsistencies in the metadata. Common issues included missing sample IDs, sounding data, and discrepancies in date formats. Sounding data, typically recorded on BIONESS log sheets, was often missing and needed to be entered manually. Sample IDs were inconsistently recorded,and stickers were not used on some missions, required compound unique sample IDs to be generated. In those cases, the formula used to create compound sample IDs followed Mary Kennedy's procedures.
+
+*compound sample ID formula*
+Example: 2013037092006002
+2013037 is the numeric section of the mission identifier (HUD2013037)
+092 is the last three digits of the gear type from BioChem bcgears table
+006 is the Tow number
+002 is the net number 
 
 ### Standardizing Metadata
 
-To address these issues, we standardized the metadata across all files. This involved:
+To address some issues, we standardized the metadata across all files. This involved:
 
 Ensuring consistent date formats (DD-MON-YY).
 Standardizing column names and metadata formatting, including dates and gear representation.
 Adding missing metadata manually from handwritten log sheets, such as event numbers, dates, and sample IDs.
+
+Station names were standardized to facilitate future data extraction and comparison.
+
+*Table with original and updated station names*
+
+GULD3, GULLYD3 both became GULLY_D3
+HL3 and HL_3 became HL_03
+RL1 and RL_1 became RL_01
+CSL_4 became CSL_04
+RATBA-1 became RATBA_01
+RATBA-2 became RATBA_02
+HL_3.3 became HL_03.3
 
 ### Quality Control and Validation
 
@@ -47,9 +68,11 @@ Quality control was a critical part of the metadata cleaning process. We conduct
 
 - Dates matched between log sheets and data.
 - Start and end depths were consistent between log sheets and data.
-- Tow-sample matches were accurate.
+- Tow and sample numbers were accurate.
 - Event numbers were consistent across log sheets and data.
-- Results of these checks were recorded in a tracking spreadsheet, and any inconsistencies were documented in a metadata discrepancies file.
+- Results of these checks were recorded in a tracking spreadsheet, and any inconsistencies were documented in a metadata discrepancies file
+
+Each inconsistency was investigated and resolved with help fro mdata providers (Rebecca Milne) and supervisors (Catherine Johnson)
 
 ### Supplementing Metadata
 
@@ -67,7 +90,7 @@ The standardized format of the files is essential for ensuring consistency and e
 Standardized File Structure
 Each file contains the following columns:
 
-* format into table*
+*format into table*
 Column Name	Definition
 MISSION	Provide definition here
 DATE	Provide definition here
@@ -101,74 +124,62 @@ In order to properly represent the plankton data in BioChem, the sampled volume
 information was essential. This metadata was found in the BIONESS electronic files
 which were located for all except 1 historical mission slated to be archived.
 
-The elctronic file format was confirmed with Nelson Rice who wrote the original
+The electronic file format was confirmed with Nelson Rice who wrote the original
 program to produce the files. 
 
-The ectronic file log was generated manually with information from the 
-logsheets, electronic files and taxonomic data. It includes columns
-  - mission
-  - tow
-  - event
-  - electronic_file_name
-  - sample_id
-  - net_number
-  - volume
-
-```{r}
-library(BIONESSQC)
-datapath <- 'R:/Science/BIODataSvc/SRC/ZPlankton_DataRescue/OGrady_2024/raw_data'
-# Gather all files for HUD2014030 (test mission to be loaded first)
-efiles <- readxl::read_xlsx(file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx'))
-efile_paths <- list()
-for (i in 1:length(efiles$electronic_file_name)) {
-  efile_paths[[i]] <- list.files(file.path(datapath, efiles$mission[i]),
-             pattern = efiles$electronic_file_name[i],
-             recursive = TRUE,
-             full.names = TRUE)
-}
-
-bionessdata <- list()
-for (i in 1:length(efile_paths)) {
-  bionessdata[[i]] <- read_bioness(efile_paths[[i]])
-}
-
-```
-
-
-Once the electronic files were accessible in R, I was able to extract the volume 
-data to provide along with the plankton taxonomic data and other event metadata.
-
-```{r}
-# Read the volume table
-vol_table <- readxl::read_xlsx(file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx'))
-
-# Synthesize volume data in a table for loading
-vol_full <- map_dfr(bionessdata, function(efiledat) {
-  event_num <- as.numeric(efiledat$metadata$`Event #`)
-  net_nums <- as.numeric(str_extract(efiledat$data$net_number, "\\d+"))
-  volume <- as.numeric(efiledat$data$volume)
-  
-  vol_dat <- data.frame(event_num, net_nums, volume)
-  
-  vol_table %>%
-    select(-volume) %>%
-    inner_join(vol_dat, by = c('event' = 'event_num', 'net_number' = 'net_nums'))
-})
-
-xlsx::write.xlsx(x = vol_full,
-                 file = file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx')
-                 )
-
-head(vol_full)
-```
-
 Volume data is combined with other metadata including event, and sample ID to be
-matched up to taxonomic data.
+matched up to taxonomic data. This work was done in `volume_extraction.R` within
+this project.
 
 
 # Quality Control
 
-*List tests and what they check along with results*
+Quality control functions were developed as part of this project. They can be 
+found in the BIONESSQC package on GitHub (https://github.com/EOGrady21/BIONESSQC).
+
+These tests were developed in close co-ordination with Rebecca Milne to meet the
+expectations of zooplankton analysis methodologies for the Atlantic Zone Monitoring
+Program at BIO.
+
+1. Data Formatting Check: This function verifies the formatting of the BIONESS 
+data, including column names, data types, and consistency in columns that should
+be copied. It checks for missing columns, correct data types, and consistency 
+in specific columns like "MISSION" and "GEAR".
+
+2. Metadata Check: This function compares the metadata (Elog file) against the 
+BIONESS data to ensure that all events are present in both data frames and that 
+the date ranges match. It checks for missing events in the metadata and 
+mismatched date ranges. This test is optional as some missions did not have an 
+elog file generated.
+
+3. Calanus Analysis Check: This function ensures that all Calanus species are 
+labeled as analysis 2 and have the same split fraction for each sample ID. It 
+checks for consistent analysis values and split fractions among Calanus species.
+
+4. Weight Checks: This function verifies the weight columns in the BIONESS data.
+It ensures that the dry weight is less than half of the small wet weight for a 
+unique sample ID and that the total weight is consistent with the sum of the 
+small and large biomass. It also checks for properly named weight data.
+
+5. Data Completeness Check: This function checks the BIONESS data for 
+completeness, including the presence of multiple zooplankton species in analysis
+1, the presence of small biomass, total weight, and dry weight, and the presence
+of Oithona species. It verifies that specific values are correctly coded for 
+small biomass, total weight, and dry weight.
+
+6. Split Fraction Check: This function ensures that wet weights have a split 
+fraction of 1, dry weights have a split fraction of 0.5, and that Calanus 
+species have a single unique split fraction for each sample ID. It checks for 
+correct split fractions in the data.
+
+7. Large Animal Check: This function verifies the large animal counts and 
+weights to ensure that there is only one count per sample ID and that the counts
+are integers. It also checks that there is only one weight per sample ID and 
+that the weights are recorded to 4 decimal places.
+
+8. Numeric Precision Check: This function ensures that all counts are integers 
+and all weights are recorded to 4 decimal places. It checks for non-integer 
+counts and integer weights in the data.
 
 # Conclusion
 
