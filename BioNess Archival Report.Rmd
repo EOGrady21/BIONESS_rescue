@@ -7,33 +7,54 @@ This R markdown outlines the steps taken to archive historical BIONESS data in B
 This project was undertaken under the direction of Catherine Johnson at Fisheries and Oceans
 Canada, Maritimes Region Ocean Ecosystems Science Division.
 
-This report summarizes the completion of the project involving the consolidation and quality control of plankton data from various missions. The data was consolidated from various locations and shared folders at Bedford Institute of Oceanography from missions between 2009 and 2016. 
+This report summarizes the completion of the project involving the consolidation
+and quality control of plankton data from various missions. The data was 
+consolidated from various locations and shared folders at Bedford Institute of 
+Oceanography from missions between 2009 and 2016. 
 
-# Data cleaning and formatting
+## Data cleaning and formatting
 
-The raw data was consolidated into a single folder for each cruise, sourced from various locations. We checked the plankton data loaded to BioChem for each mission, noting that none included BIONESS data. Metadata was checked for each mission, and BIONESS log sheets were found for each mission since most missions required at least some metadata from the logs to be input.
+The raw data was consolidated into a single folder for each cruise, sourced from
+various locations. We checked the plankton data loaded to BioChem for each 
+mission, noting that none included BIONESS data. Metadata was checked for each 
+mission, and BIONESS log sheets were found for each mission since most missions 
+required at least some metadata from the logs to be input.
 
-A discussion with Rebecca Milne prompted the organization of data accounting by individual station, as data was often analyzed by location rather than mission. For example, Gully tows from 2003-2010 were analyzed together, likely due to funding organization. We reviewed log sheets and set up an accounting spreadsheet for 2009-2016 data by mission and station. 
+A discussion with Rebecca Milne prompted the organization of data accounting by 
+individual station, as data was often analyzed by location rather than mission.
+For example, Gully tows from 2003-2010 were analyzed together, likely due to 
+funding organization. We reviewed log sheets and set up an accounting 
+spreadsheet for 2009-2016 data by mission and station. 
 
-* How many missions and stations were archived as part of this project* 
+*How many missions and stations were archived as part of this project* 
 
 This project prepared and archived 55 stations across 13 missions from 2009-2016.
 
-* Table of data included *
+*Table of data included *
 
 
 
-# Metadata cleaning and supplementing
+## Metadata cleaning and supplementing
 
-The process of metadata cleaning and supplementing was a crucial step in ensuring the integrity and usability of the plankton data for future analyses.
+The process of metadata cleaning and supplementing was a crucial step in ensuring
+the integrity and usability of the plankton data for future analyses.
 
 ### Initial Assessment and Consolidation
 
-The first step involved consolidating raw data from various sources into a single folder for each cruise. This included data from Shelley Bond's investigative folders (from Mary Kennedy's archives) and SRC cruise folders. We then conducted an initial assessment of the metadata to identify gaps and inconsistencies.
+The first step involved consolidating raw data from various sources into a single
+folder for each cruise. This included data from Shelley Bond's investigative 
+folders (from Mary Kennedy's archives) and SRC cruise folders. We then conducted
+an initial assessment of the metadata to identify gaps and inconsistencies.
 
 ### Identifying Metadata Gaps
 
-During the initial assessment, we identified several gaps and inconsistencies in the metadata. Common issues included missing sample IDs, sounding data, and discrepancies in date formats. Sounding data, typically recorded on BIONESS log sheets, was often missing and needed to be entered manually. Sample IDs were inconsistently recorded,and stickers were not used on some missions, required compound unique sample IDs to be generated. In those cases, the formula used to create compound sample IDs followed Mary Kennedy's procedures.
+During the initial assessment, we identified several gaps and inconsistencies in
+the metadata. Common issues included missing sample IDs, sounding data, and 
+discrepancies in date formats. Sounding data, typically recorded on BIONESS log 
+sheets, was often missing and needed to be entered manually. Sample IDs were 
+inconsistently recorded,and stickers were not used on some missions, requiring
+compound unique sample IDs to be generated. In those cases, the formula used to 
+create compound sample IDs followed Mary Kennedy's procedures.
 
 *compound sample ID formula*
 Example: 2013037092006002
@@ -48,31 +69,40 @@ To address some issues, we standardized the metadata across all files. This invo
 
 Ensuring consistent date formats (DD-MON-YY).
 Standardizing column names and metadata formatting, including dates and gear representation.
-Adding missing metadata manually from handwritten log sheets, such as event numbers, dates, and sample IDs.
+Adding missing metadata manually from handwritten log sheets, such as event 
+numbers, dates, and sample IDs.
 
 Station names were standardized to facilitate future data extraction and comparison.
 
 *Table with original and updated station names*
 
-GULD3, GULLYD3 both became GULLY_D3
-HL3 and HL_3 became HL_03
-RL1 and RL_1 became RL_01
-CSL_4 became CSL_04
-RATBA-1 became RATBA_01
-RATBA-2 became RATBA_02
-HL_3.3 became HL_03.3
+| Original Names | Updated Names |
+|----------------|---------------|
+| GULD3          | GULLY_D3      |
+| GULLYD3        | GULLY_D3      |
+| HL3            | HL_03         |
+| HL_3           | HL_03         |
+| RL1            | RL_01         |
+| RL_1           | RL_01         |
+| CSL_4          | CSL_04        |
+| RATBA-1        | RATBA_01      |
+| RATBA-2        | RATBA_02      |
+| HL_3.3         | HL_03.3       |
 
 ### Quality Control and Validation
 
-Quality control was a critical part of the metadata cleaning process. We conducted thorough checks to ensure:
+Quality control was a critical part of the metadata cleaning process. We 
+conducted thorough checks to ensure:
 
 - Dates matched between log sheets and data.
 - Start and end depths were consistent between log sheets and data.
 - Tow and sample numbers were accurate.
 - Event numbers were consistent across log sheets and data.
-- Results of these checks were recorded in a tracking spreadsheet, and any inconsistencies were documented in a metadata discrepancies file
+- Results of these checks were recorded in a tracking spreadsheet, and any 
+  inconsistencies were documented in a metadata discrepancies file
 
-Each inconsistency was investigated and resolved with help fro mdata providers (Rebecca Milne) and supervisors (Catherine Johnson)
+Each inconsistency was investigated and resolved with help from data providers 
+(Rebecca Milne) and supervisor (Catherine Johnson)
 
 ### Supplementing Metadata
 
@@ -81,48 +111,55 @@ In cases where metadata was missing or incomplete, we supplemented it using vari
 - Filling in sample IDs using a compound ID formula where necessary.
 - Confirming metadata with team members, such as checking what was written on sample bottles when stickers were not used.
 
-In some older missions (pre 2014), there were no elog or equivalent files. In these cases, elog tables were manually generated from handwritten bridge log and BIONESS log sheet information. These elog files match the format used to load elog metadata into the AZMP template. 
+In some older missions (pre 2014), there were no elog or equivalent files. In 
+these cases, elog tables were manually generated from handwritten bridge log 
+and BIONESS log sheet information. These elog files match the format used to 
+load elog metadata into the AZMP template. 
 
 
-# Load file formats
-The standardized format of the files is essential for ensuring consistency and ease of use in future analyses. Each file follows a specific structure with clearly defined columns. Below is an overview of the file format.
+## Load file formats
+The standardized format of the files is essential for ensuring consistency and 
+ease of use in future analyses. Each file follows a specific structure with 
+clearly defined columns. Below is an overview of the file format.
 
 Standardized File Structure
 Each file contains the following columns:
 
-*format into table*
-Column Name	Definition
-MISSION	Provide definition here
-DATE	Provide definition here
-STN	Provide definition here
-TOW#	Provide definition here
-GEAR	Provide definition here
-EVENT	Provide definition here
-SAMPLEID	Provide definition here
-START_DEPTH	Provide definition here
-END_DEPTH	Provide definition here
-ANALYSIS	Provide definition here
-SPLIT	Provide definition here
-ALIQUOT	Provide definition here
-SPLIT_FRACTION	Provide definition here
-TAXA	Provide definition here
-NCODE	Provide definition here
-STAGE	Provide definition here
-SEX	Provide definition here
-DATA_VALUE	Provide definition here
-PROC_CODE	Provide definition here
-WHAT_WAS_IT	Provide definition here
-COMMENT	Provide definition here
+
+| Column Name    | Definition                                                   |
+|----------------|--------------------------------------------------------------|
+| MISSION        | Mission name                                                 |
+| DATE           | Date of collection                                           |
+| STN            | Station name (standardized)                                  |
+| TOW#           | Numeric identifier for the tow                               |
+| GEAR           | Mesh size in um (202)                                        |
+| EVENT          | Numeric identifier for the event                             |
+| SAMPLEID       | Unique sample ID                                             |
+| START_DEPTH    | Opening depth of the net                                     |
+| END_DEPTH      | Closing depth of the net                                     |
+| ANALYSIS       | Numeric code based on AZMP protocol                          |
+| SPLIT          | Numeric split                                                |
+| ALIQUOT        | Aliquot of sample analyzed                                   |
+| SPLIT_FRACTION | Split fraction of sample analyzed                            |
+| TAXA           | Taxonomic name                                               |
+| NCODE          | Code for taxonomic name to reference BioChem tables          |
+| STAGE          | Numeric code for stage (reference to BioChem tables)         |
+| SEX            | Numeric code for sex (reference to BioChem tables)           |
+| DATA_VALUE     | Numeric measurement, either count or weight                  |
+| PROC_CODE      | Numeric code based on AZMP protocol                          |
+| WHAT_WAS_IT    | Numeric code based on AZMP protocol                          |
+| COMMENT        | Any comments on samples. This is also where we have input 'flag' comments |
+
+
 
 ### Date Format
 
 The date format used in all files is DD-MON-YY to ensure consistency across datasets.
 
-# Extracting volume data from electronic files
+## Extracting volume data from electronic files
 
 In order to properly represent the plankton data in BioChem, the sampled volume
-information was essential. This metadata was found in the BIONESS electronic files
-which were located for all except 1 historical mission slated to be archived.
+information was essential. This metadata was found in the BIONESS electronic files.
 
 The electronic file format was confirmed with Nelson Rice who wrote the original
 program to produce the files. 
@@ -132,7 +169,7 @@ matched up to taxonomic data. This work was done in `volume_extraction.R` within
 this project.
 
 
-# Quality Control
+## Quality Control
 
 Quality control functions were developed as part of this project. They can be 
 found in the BIONESSQC package on GitHub (https://github.com/EOGrady21/BIONESSQC).
@@ -158,8 +195,9 @@ checks for consistent analysis values and split fractions among Calanus species.
 
 4. Weight Checks: This function verifies the weight columns in the BIONESS data.
 It ensures that the dry weight is less than half of the small wet weight for a 
-unique sample ID and that the total weight is consistent with the sum of the 
-small and large biomass. It also checks for properly named weight data.
+unique sample ID, stage and sex, and that the total weight is consistent with 
+the sum of the small and large biomass. It also checks for properly named weight
+data.
 
 5. Data Completeness Check: This function checks the BIONESS data for 
 completeness, including the presence of multiple zooplankton species in analysis
@@ -181,9 +219,27 @@ that the weights are recorded to 4 decimal places.
 and all weights are recorded to 4 decimal places. It checks for non-integer 
 counts and integer weights in the data.
 
-# Conclusion
+## Quality Control Results
+
+The following quality control comments were developed as a standard to represent
+quality control results in plankton data, since there is no Flag column in the 
+BioChem plankton schema.
+
+(1) DATA QUALITY: QC HAS BEEN PERFORMED; ELEMENT APPEARS CORRECT.
+
+(2) DATA QUALITY: QC HAS BEEN PERFORMED; ELEMENT APPEARS INCONSISTENT WITH OTHER ELEMENTS.
+
+(3) DATA QUALITY: QC HAS BEEN PERFORMED; ELEMENT APPEARS DOUBTFUL.
+
+(4) DATA QUALITY: QC HAS BEEN PERFORMED; ELEMENT APPEARS ERRONEOUS.
+
+
+
+## Conclusion
 
 *Status of BIONESS data, what other data exists which was outside of this project scope*
+
+
 *Links to github and data*
 
 
