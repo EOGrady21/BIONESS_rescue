@@ -10,18 +10,29 @@
 # - net_number
 # - volume
 
-
+library(tidyverse)
 library(BIONESSQC)
 datapath <- 'R:/Science/BIODataSvc/SRC/ZPlankton_DataRescue/OGrady_2024/raw_data'
 # Gather all files for HUD2014030 (test mission to be loaded first)
-efiles <- readxl::read_xlsx(file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx'))
+efiles_log <- list.files(datapath, pattern = 'electronic_file_log.xlsx',
+                         recursive = TRUE,
+                         full.names = TRUE)
+efiles_log <- efiles_log[12:14]
+# efiles <- readxl::read_xlsx(file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx'))
+
+for (log in efiles_log) {
+  efiles <- readxl::read_xlsx(log)
+  cat('.')
+
 efile_paths <- list()
 for (i in 1:length(efiles$electronic_file_name)) {
+  
   efile_paths[[i]] <- list.files(file.path(datapath, efiles$mission[i]),
                                  pattern = efiles$electronic_file_name[i],
                                  recursive = TRUE,
                                  full.names = TRUE)
 }
+cat('.')
 
 bionessdata <- list()
 for (i in 1:length(efile_paths)) {
@@ -29,14 +40,14 @@ for (i in 1:length(efile_paths)) {
 }
 
 
-
+cat('.')
 
 # Once the electronic files were accessible in R, I was able to extract the volume 
 # data to provide along with the plankton taxonomic data and other event metadata.
-
-
-# Read the volume table
-vol_table <- readxl::read_xlsx(file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx'))
+if (!'volume' %in% colnames(efiles)){
+efiles <- efiles %>%
+  dplyr::mutate(volume = NA)
+}
 
 # Synthesize volume data in a table for loading
 vol_full <- map_dfr(bionessdata, function(efiledat) {
@@ -46,13 +57,24 @@ vol_full <- map_dfr(bionessdata, function(efiledat) {
   
   vol_dat <- data.frame(event_num, net_nums, volume)
   
-  vol_table %>%
+  efiles %>%
     select(-volume) %>%
     inner_join(vol_dat, by = c('event' = 'event_num', 'net_number' = 'net_nums'))
 })
 
-xlsx::write.xlsx(x = vol_full,
-                 file = file.path(datapath, 'HUD2014030/HUD2014030_electronic_file_log.xlsx')
-)
+# remove duplicates if necessary
+vol_full <- vol_full %>% distinct()
+if (nrow(vol_full) == 0) {
+  stop('Empty volume dataframe! Check metadata matching between electronic files')
+}
 
-head(vol_full)
+cat('.')
+
+xlsx::write.xlsx(x = vol_full,
+                 file = log)
+
+cat('File: ', log, 'complete! \n')
+cat('========================================================================')
+
+}
+
