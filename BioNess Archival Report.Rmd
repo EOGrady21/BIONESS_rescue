@@ -240,6 +240,15 @@ BioChem plankton schema.
 *Status of BIONESS data, what other data exists which was outside of this project scope*
 
 
-*Links to github and data*
+## Resources
+
+The details of this project are contained in 
+[sharepoint](https://086gc.sharepoint.com/:u:/r/sites/SciencePlanningAdviceandDataSPAD/SitePages/BioChem-Reports.aspx?csf=1&web=1&e=PrhPeO)
+
+The BIONESSQC package can be found on GitHub at [link](https://github.com/EOGrady21/BIONESSQC)
+
+Other BIONESS workflows can be found in this project on GitHub [link](https://github.com/EOGrady21/BIONESS_rescue)
+
+
 
 

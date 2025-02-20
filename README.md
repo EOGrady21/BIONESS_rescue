@@ -28,4 +28,5 @@ workplan and the results achieved.
   prior to this rescue project
 
 - Data formatted and archived under this project can be found in
-  individual mission folders in SRC, in the BIONESS subfolder
+  individual mission folders in SRC, in the BIONESS subfolder on the BIO
+  shared network drive
