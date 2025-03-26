@@ -1,6 +1,6 @@
 ---
 title: "Historical BIONESS Archival"
-output: html_notebook
+output: pdf_document
 author: "Emily O'Grady"
 ---
 This R markdown outlines the steps taken to archive historical BIONESS data in BioChem.
@@ -30,7 +30,24 @@ spreadsheet for 2009-2016 data by mission and station.
 
 This project prepared and archived 55 stations across 13 missions from 2009-2016.
 
-*Table of data included *
+*Table 1: Data archived under this project *
+
+| Mission    | Year | Number of stations |
+|------------|------|--------------------|
+| HUD2009005 | 2009 | 2                  |
+| HUD2009048 | 2009 | 3                  |
+| HUD2010006 | 2010 | 4                  |
+| HUD2011004 | 2011 | 4                  |
+| HUD2011043 | 2011 | 7                  |
+| HUD2012042 | 2012 | 6                  |
+| HUD2013004 | 2013 | 5                  |
+| HUD2013037 | 2013 | 14                 |
+| HUD2014004 | 2014 | 11                 |
+| HUD2014030 | 2014 | 7                  |
+| HUD2015004 | 2015 | 7                  |
+| HUD2015030 | 2015 | 7                  |
+| HUD2016003 | 2016 | 4                  |
+| HUD2016027 | 2016 | 10                 |
 
 
 
@@ -74,7 +91,7 @@ numbers, dates, and sample IDs.
 
 Station names were standardized to facilitate future data extraction and comparison.
 
-*Table with original and updated station names*
+*Table 2: Original and updated station names*
 
 | Original Names | Updated Names |
 |----------------|---------------|
@@ -125,6 +142,7 @@ clearly defined columns. Below is an overview of the file format.
 Standardized File Structure
 Each file contains the following columns:
 
+*Table 3: Data columns and definitions*
 
 | Column Name    | Definition                                                   |
 |----------------|--------------------------------------------------------------|
@@ -146,6 +164,7 @@ Each file contains the following columns:
 | STAGE          | Numeric code for stage (reference to BioChem tables)         |
 | SEX            | Numeric code for sex (reference to BioChem tables)           |
 | DATA_VALUE     | Numeric measurement, either count or weight                  |
+| DATA_QC_CODE   | Quality control flag, following BioChem BCQUALCODES table    |
 | PROC_CODE      | Numeric code based on AZMP protocol                          |
 | WHAT_WAS_IT    | Numeric code based on AZMP protocol                          |
 | COMMENT        | Any comments on samples. This is also where we have input 'flag' comments |
@@ -221,23 +240,42 @@ counts and integer weights in the data.
 
 ## Quality Control Results
 
-The following quality control comments were developed as a standard to represent
-quality control results in plankton data, since there is no Flag column in the 
-BioChem plankton schema.
+The column DATA_QC_CODE was used to represent the quality control results in the
+raw data sheets for each mission. It has been requested by OESD and ODIS to add this
+column to the BioChem plankton table structure, in BCPLANKTNGENERALS. As of the
+date of this report this change has not yet been made, and so the BIONESS data
+has not yet been loaded to BioChem.
 
-(1) DATA QUALITY: QC HAS BEEN PERFORMED; ELEMENT APPEARS CORRECT.
+The flags in DATA_QC_CODE follow the BioChem flag scheme. 
 
-(2) DATA QUALITY: QC HAS BEEN PERFORMED; ELEMENT APPEARS INCONSISTENT WITH OTHER ELEMENTS.
+0 - QC has not been performed.
 
-(3) DATA QUALITY: QC HAS BEEN PERFORMED; ELEMENT APPEARS DOUBTFUL.
+1 - QC has been performed; element appears correct.
 
-(4) DATA QUALITY: QC HAS BEEN PERFORMED; ELEMENT APPEARS ERRONEOUS.
+2 - QC has been performed; element appears inconsistent.
 
+3 - QC has been performed; element appears doubtful.
 
+4 - QC has been performed; element appears erroneous.
+
+There were no major quality control issues detected in the historical datasets 
+in this project. There were a handful of data entry errors and formatting issues
+that were caught and corrected. There were also a handful of cases where unique
+circumstances (ie. broken nets) caused slightly skewed results, and so we were
+able to apply flags to these data, in combination with comment text in order to 
+inform the end-user.
 
 ## Conclusion
 
-*Status of BIONESS data, what other data exists which was outside of this project scope*
+This project was able to successfully archive a significant chunk of historical BIONESS data, although more data remains. The missions which were processed under this project have all been archived on BIO's shared drive, under the appropriate mission folder in the general SRC decade folders. Although the data has not yet been loaded to BioChem, it is the intention that this project continue and the data be loaded through DART once the required adjustments are made to BCPLANKTNGENERALS.
+
+## Continuing work
+
+Patrick Upson and Emily O'Grady are continuing to work on the capacity of DART to load stratified net data through DART to BioChem. 
+
+There are approximately 43 more stations (tows) of BIONESS data to be archived. Some of this data has not been analyzed and will require future effort from zooplankton taxonomists and data management support.
+
+An inventory of all BIONESS and multinet data is available on sharepoint (link below in **Resources**) in the sheet: "Stratified_Net_Data_Accounting_2009_2024". Which can help to direct future efforts. 
 
 
 ## Resources
@@ -249,6 +287,7 @@ The BIONESSQC package can be found on GitHub at [link](https://github.com/EOGrad
 
 Other BIONESS workflows can be found in this project on GitHub [link](https://github.com/EOGrady21/BIONESS_rescue)
 
-
+Individual mission files including BIONESS electronic files, QC results, and taxonomic data can be found on SRC under the appropriate decade and mission folders in a standard 'BIONESS' folder structure. 
+eg. "R:/Science/BIODataSvc/SRC/2010s/2014/HUD2014030/BIONESS"
 
 
